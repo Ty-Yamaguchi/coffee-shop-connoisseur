@@ -1,0 +1,99 @@
+<head>
+  <title>Coffee Shop Connoisseur</title>
+</head>
+ 
+<!--------------------------------------------------------
+						
+					     BODY
+						
+---------------------------------------------------------->
+
+<body>
+  <div class="container">
+  
+    <header>
+    
+      	<section class="headbar">
+      		<h1>Coffee Shop Connoisseur</h1>
+      	</section>
+		
+		<section class="mainpage">               
+	    	{{> intro}}
+	    	
+	    	<ul>	
+			{{#each Cafes}}
+				<a href="">{{> cafe}}</a>
+			{{/each}}
+			</ul>
+			
+		</section>
+		
+	    
+	<section class="adminarea">               
+	       
+			{{> admin}}
+			
+	</section>
+
+    </header>
+		
+  </div> 
+</body>
+ 
+ 
+<!--------------------------------------------------------
+						
+					   TEMPLATES
+						
+---------------------------------------------------------->
+
+
+<template name="intro">  
+	<div class="csphoto" style="background: url(http://i2.wp.com/www.lazykauai.com/wp-content/uploads/2014/04/kalaheo-cafe-2.jpg?resize=800%2C400) no-repeat center center; background-size: cover;">
+		<div class="cover">
+			<h1 class="coffeeco">Welcome!</h1>
+		</div>
+	</div>	  
+</template>
+ 
+<template name="cafe">
+  <li class="intro">
+  	<div class="csphoto" style="background-image: url({{csimage}}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+		<div class="cover">
+				<button class="delete">&times;</button> 
+				<h1 class="coffeeco">{{text}}</h1>
+				<span class="description">{{description}}</span><br>
+				<span class="placeid">Place ID: {{placeid}}</span>
+		</div>
+  	</div>
+  </li>
+</template>
+
+
+<template name="home">
+</template>
+
+
+
+<!--------------------------------------------------------
+						
+					   ADMIN AREA
+						
+---------------------------------------------------------->
+
+<template name="admin">
+   	<section class="cafeform"> 
+   	  		
+        <h3>Add A New Coffee Shop</h3>
+	 	<form class="new-cafe">
+			<input type="text" name="text" placeholder="Name" /><br>
+			<input type="text" name="placeid" placeholder="Google Place ID" /><br>
+			<input type="text" name="csimage" placeholder="Image URL" /><br>
+			<input type="text" name="description" placeholder="Description" /><br>
+			<button type="submit">Add Coffee Shop</button>
+		</form>
+    
+    
+   	</section>
+</template>
+
