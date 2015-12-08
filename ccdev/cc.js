@@ -38,7 +38,9 @@ if (Meteor.isClient) {
         placeid: placeid,
         description: description,
         csimage: csimage,
-        createdAt: new Date() // current time
+        createdAt: new Date(), // current time
+        owner: Meteor.userID(),
+        username: Meteor.user().username
       });
  
       // Clear form
