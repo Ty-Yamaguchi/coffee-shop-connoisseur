@@ -1,4 +1,26 @@
-/* CSS declarations go here */
+
+/* ACCOUNTS UI */
+
+
+.login{
+	margin: 20px;
+	position: absolute;
+	top: 20px;
+	left: 5px;
+	text-transform: capitalize;
+}
+
+#login-buttons a {
+	text-decoration: none;
+}
+
+.login-link-text {
+	border: 1px solid #fff;
+	padding: 5px 10px;
+}
+
+/* BODY */
+
 
 body, ul, li {
 	margin: 0; 
@@ -114,9 +136,4 @@ ul {list-style-type: none;}
 
 
 
-/* ACCOUNTS UI */
 
-
-.login{
-	margin: 20px;
-}

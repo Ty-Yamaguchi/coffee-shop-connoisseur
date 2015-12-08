@@ -21,10 +21,12 @@
 						
 ---------------------------------------------------------->
 
+
 <!-- HEADER BAR -->
 <template name="header">  
 	<header>
 	  	<section class="headbar">
+	  		{{> login}}
 	  		<h1>Coffee Shop Connoisseur</h1>
 	  	</section>
 	</header>
@@ -62,16 +64,6 @@
 </template>
 
 
-<!-- ACCOUNTS UI // LOGIN -->
- 
-<template name="login">
-
-		<div class="login">
-			{{> loginButtons}}
-			</div>
-			
-</template>
-
 
 <!-- ROUTE TEMPLATE: HOME-->
 
@@ -80,7 +72,6 @@
 	{{> intro}}
 	{{> cafe}}
 	{{> admin}}
-	{{> login}}
 
 </template>
 
@@ -91,6 +82,17 @@
 					   ADMIN AREA
 						
 ---------------------------------------------------------->
+
+<!-- ACCOUNTS UI // LOGIN -->
+ 
+<template name="login">
+		<div class="login">
+			{{> loginButtons}}
+			</div>
+</template>
+
+
+<!-- ADD COFFEE SHOPS -->
 
 <template name="admin">
    	<section class="cafeform"> 
