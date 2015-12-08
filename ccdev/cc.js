@@ -5,6 +5,9 @@ Router.route('/', function () {
 });
 
 
+/********* ACCOUNTS UI *********/
+
+
 
 /********* MONGO DB *********/
 
@@ -52,5 +55,8 @@ if (Meteor.isClient) {
     }
   });
 
-  
+  Accounts.ui.config({
+	passwordSignupFields: "USERNAME_ONLY"
+});
+
 }
