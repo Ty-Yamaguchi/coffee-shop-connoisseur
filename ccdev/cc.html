@@ -2,6 +2,7 @@
   <title>Coffee Shop Connoisseur</title>
 </head>
  
+ 
 <!--------------------------------------------------------
 						
 					     BODY
@@ -13,6 +14,8 @@
 		<!-- ALL CONTENT GOES HERE -->
 
 </body>
+ 
+ 
  
  
 <!--------------------------------------------------------
@@ -37,7 +40,7 @@
 <!-- INTRODUCTION -->
 
 <template name="intro">  
-	<div class="csphoto" style="background: url(http://i2.wp.com/www.lazykauai.com/wp-content/uploads/2014/04/kalaheo-cafe-2.jpg?resize=800%2C400); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+	<div class="csphoto" style="background: url(img/kalaheo-cafe.jpg); background-repeat: no-repeat; background-position: center center; background-size: cover;">
 		<div class="cover">
 			<h1 class="coffeeco">Welcome!</h1>
 		</div>
@@ -73,6 +76,23 @@
 </template>
 
 
+<!-- FOOTER -->
+
+<template name="footer">  
+	<div class="footbar">
+		<a href="/backend">Admin Area</a>
+	</div>	  
+</template>
+
+
+
+
+
+<!--------------------------------------------------------
+						
+					   ROUTE TEMPLATES
+						
+---------------------------------------------------------->
 
 <!-- ROUTE TEMPLATE: HOME-->
 
@@ -80,14 +100,17 @@
 	{{> header}}
 	{{> intro}}
 	{{> cafe}}
-
+	{{> footer}}
 </template>
 
 <!-- ROUTE TEMPLATE: LOGIN-->
 <template name="backend">
 	{{> header}}
 	{{> admin}}
+	{{> footer}}
 </template>
+
+
 
 
 <!--------------------------------------------------------
