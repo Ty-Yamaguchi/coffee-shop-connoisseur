@@ -1,7 +1,7 @@
 /********* IRON ROUTER *********/
 
 Router.route('/', function () {
-  this.render('Home');
+  this.render('home');
 });
 
 
@@ -12,7 +12,7 @@ Cafes = new Mongo.Collection("cafes");
 
 if (Meteor.isClient) {
   // This code only runs on the client
-  Template.body.helpers({
+  Template.cafe.helpers({
     Cafes: function () {
 		return Cafes.find({}, {sort: {createdAt: -1}});    }
   });
