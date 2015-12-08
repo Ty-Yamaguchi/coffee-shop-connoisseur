@@ -8,6 +8,13 @@ Router.route('/backend', function () {
   this.render('backend');
 });
 
+Router.route('/post/:_id', function () {
+  var params = this.params; // { _id: "5" }
+  var id = params._id; // "5"
+    this.render('details');
+
+});
+
 /********* MONGO DB *********/
 
 Cafes = new Mongo.Collection("cafes");

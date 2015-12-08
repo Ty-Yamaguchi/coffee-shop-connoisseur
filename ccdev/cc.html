@@ -86,6 +86,36 @@
 </template>
 
 
+
+<!-- COFFEE SHOP LIST -->
+ 
+<template name="details">
+	{{#each Cafes}}
+		<ul>
+		<li class="intro">
+			<div class="csphoto" style="background-image: url({{csimage}}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+			
+			<div class="cover">
+				
+				{{#if currentUser}}
+					<button class="delete">&times;</button> 
+				{{/if}}
+
+				<h1 class="coffeeco">{{text}}</h1>
+				<span class="description">{{description}}</span><br>
+				<span class="placeid">{{placeid}}</span>
+				
+			</div>
+			
+			</div>
+		</li>
+		</ul>
+	{{/each}}
+
+</template>
+
+
+
 <!-- FOOTER -->
 
 <template name="footer">  
@@ -118,6 +148,11 @@
 	{{> header}}
 	{{> admin}}
 </template>
+
+<template name="single">
+	{{> details}}
+</template>
+
 
 
 
