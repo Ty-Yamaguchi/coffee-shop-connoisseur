@@ -111,3 +111,12 @@ input {
 
 .delete {opacity: 0.3;}
 ul {list-style-type: none;}
+
+
+
+/* ACCOUNTS UI */
+
+
+.login{
+	margin: 20px;
+}
