@@ -23,6 +23,7 @@
 
 
 <!-- HEADER BAR -->
+
 <template name="header">  
 	<header>
 	  	<section class="headbar">
@@ -42,6 +43,7 @@
 		</div>
 	</div>	  
 </template>
+
 
 <!-- COFFEE SHOP LIST -->
  
@@ -78,10 +80,14 @@
 	{{> header}}
 	{{> intro}}
 	{{> cafe}}
-	{{> admin}}
 
 </template>
 
+<!-- ROUTE TEMPLATE: LOGIN-->
+<template name="backend">
+	{{> header}}
+	{{> admin}}
+</template>
 
 
 <!--------------------------------------------------------
@@ -102,20 +108,41 @@
 <!-- ADD COFFEE SHOPS -->
 
 <template name="admin">
+
 {{#if currentUser}}
-   	<section class="cafeform"> 
+
+	<!-- LIST OF CURRENT COFFEE SHOPS -->
+	
+   	<ul class="admin-cafe-list"> 
+   	
+	   	{{#each Cafes}}
+			<li class="intro">
+				<button class="delete">&times;</button> 
+				<h3 class="admin-title">{{text}}</h3>
+				<hr>
+				<span><strong>Place ID:</strong> {{placeid}}</span><br>
+				<span><strong>Image URL:</strong> {{csimage}}</span><br>
+				<span><strong>Description:</strong> {{description}}</span><br>
+			</li>
+		{{/each}}
+
+	</ul>
+
+	<!-- COFFEE SHOP SUBMISSION FORM -->
+
+   	<section class="admin-cafe-form"> 
    	  		
-        <h3>Add A New Coffee Shop</h3>
+        <h3 class="addnew">Add A New Coffee Shop</h3>
 	 	<form class="new-cafe">
 			<input type="text" name="text" placeholder="Name" /><br>
 			<input type="text" name="placeid" placeholder="Google Place ID" /><br>
 			<input type="text" name="csimage" placeholder="Image URL" /><br>
-			<input type="text" name="description" placeholder="Description" /><br>
-			<button type="submit">Add Coffee Shop</button>
+			<textarea type="text" name="description" placeholder="Description"></textarea><br>
+			<button class="button" type="submit">Add Coffee Shop</button>
 		</form>
     
-    
    	</section>
+   	
 {{/if}}
 
 </template>

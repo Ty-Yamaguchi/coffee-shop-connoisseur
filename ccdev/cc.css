@@ -1,23 +1,4 @@
 
-/* ACCOUNTS UI */
-
-
-.login{
-	margin: 20px;
-	position: absolute;
-	top: 20px;
-	left: 5px;
-	text-transform: capitalize;
-}
-
-#login-buttons a {
-	text-decoration: none;
-}
-
-.login-link-text {
-	border: 1px solid #fff;
-	padding: 5px 10px;
-}
 
 /* BODY */
 
@@ -53,11 +34,20 @@ h3 {
 	font-size: 1.04m;
 	font-family: "Avenir Next" Arial, sans-serif;
 	font-weight: 200;
+	margin: 0;
+	padding: 0;
 }
 
 a{
 	text-decoration: none;
 }
+
+strong {font-weight: 400;}
+
+
+
+
+/* HEADER */
 
 .logo {
 	position: absolute; 
@@ -80,11 +70,12 @@ a{
 }
 
 
-.page {
-	padding: 0;
-	margin: 0;
-	background: #fff;
-}
+
+
+
+
+/* HOMEPAGE */
+
 
 .coffeeco {
 	color: white;
@@ -114,20 +105,6 @@ a{
 	transition: 1s;
 }
 
-.cafeform {
-	margin: 20px;
-}
-input {
-	background: rgba(255,255,255,0.7);
-	font-size: 14px;
-	padding: 7px 10px;
-	min-width: 200px;
-	border: none;
-	box-shadow: inset 0 0 5px #ddd;
-	border: 1px solid #aaa;
-	margin-bottom: 5px;
-}
-
 .description,
 .placeid {
 	padding: 20px 0 0;
@@ -138,9 +115,106 @@ input {
 }
 
 
-.delete {opacity: 0.3;}
 ul {list-style-type: none;}
 
 
 
 
+
+
+
+/*****************************************************
+
+ 					ADMIN AREA 
+ 
+ *****************************************************/
+
+
+.addnew {text-align: center; padding: 10px; border-bottom: 1px solid #aaa; margin-bottom: 10px;}
+
+/* FORMS UI */
+
+input {
+	background: rgba(255,255,255,0.7);
+	font-size: 14px;
+	padding: 7px 10px;
+	box-sizing: border-box;
+	box-shadow: inset 0 0 5px #ddd;
+	border: 1px solid #aaa;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+textarea {
+	background: rgba(255,255,255,0.7);
+	font-size: 14px;
+	padding: 7px 10px;
+	box-sizing: border-box;
+	box-shadow: inset 0 0 5px #ddd;
+	border: 1px solid #aaa;
+	margin-bottom: 5px;
+	width: 100%;
+	min-height: 200px;
+}
+
+.button {
+	padding: 20px; 
+	background: rgba(129,100,63, 1);
+	color: white;
+	font-size: 0.9em;
+	box-sizing: border-box;
+	width: 100%;
+
+}
+
+
+
+.admin-cafe-form {
+	margin: 20px;
+}
+
+
+
+
+/* ACCOUNTS UI */
+
+
+.login{
+	margin: 20px;
+	position: absolute;
+	top: 20px;
+	left: 5px;
+	text-transform: capitalize;
+}
+
+#login-buttons a {
+	text-decoration: none;
+}
+
+.login-link-text {
+	border: 1px solid #fff;
+	padding: 5px 10px;
+}
+
+
+
+
+/* COFFEE SHOP LIST UI */
+
+
+.admin-title {
+	display: inline-block; 
+	margin-top: 10px;
+	text-align: center;
+}
+
+.admin-cafe-list {
+	margin: 20px;
+	color: #999;
+	font-family: sans-serif;
+	font-weight: 200;
+	font-size: 1em;
+	line-height: 1.2em;
+}
+
+.delete {opacity: 0.3;}

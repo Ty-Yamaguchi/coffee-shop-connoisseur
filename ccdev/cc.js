@@ -4,21 +4,28 @@ Router.route('/', function () {
   this.render('home');
 });
 
-
-/********* ACCOUNTS UI *********/
-
-
+Router.route('/backend', function () {
+  this.render('backend');
+});
 
 /********* MONGO DB *********/
 
 Cafes = new Mongo.Collection("cafes");
 
+
 if (Meteor.isClient) {
   // This code only runs on the client
+  
   Template.cafe.helpers({
     Cafes: function () {
 		return Cafes.find({}, {sort: {createdAt: -1}});    }
   });
+  
+  Template.admin.helpers({
+    Cafes: function () {
+		return Cafes.find({}, {sort: {createdAt: -1}});    }
+  });
+  
   // Form Handler for submitting Coffee Shops to Mongo DB
   Template.admin.events({
     "submit .new-cafe": function (event) {
@@ -39,8 +46,8 @@ if (Meteor.isClient) {
         description: description,
         csimage: csimage,
         createdAt: new Date(), // current time
-        owner: Meteor.userID(),
-        username: Meteor.user().username
+        	//owner: Meteor.userID(),
+        	//username: Meteor.user().username
       });
  
       // Clear form
@@ -54,8 +61,14 @@ if (Meteor.isClient) {
 	Template.cafe.events({
     "click .delete": function () {
       Cafes.remove(this._id);
-    }
-  });
+	  }
+	});
+	
+	Template.admin.events({
+    "click .delete": function () {
+      Cafes.remove(this._id);
+	  }
+	});
 
   Accounts.ui.config({
 	passwordSignupFields: "USERNAME_ONLY"
