@@ -1,4 +1,8 @@
+/*****************************************************
 
+ 					APPLICATION
+ 
+ *****************************************************/
 
 /* BODY */
 
@@ -46,7 +50,6 @@ strong {font-weight: 400;}
 
 
 
-
 /* HEADER */
 
 .logo {
@@ -68,9 +71,6 @@ strong {font-weight: 400;}
 .headbar h1{
 	padding: 20px 0 0 0;
 }
-
-
-
 
 
 
@@ -128,8 +128,9 @@ ul {list-style-type: none;}
 	background: rgba(129,100,63, 1);
 	color: white;
 	text-align: center;
-	box-sizing: border-box;
 	margin: 10px 0 0 0;
+	padding: 10px; 
+	box-sizing: border-box;
 }
 
 .footbar a {

@@ -1,3 +1,9 @@
+<!--------------------------------------------------------
+						
+					     HEAD
+						
+---------------------------------------------------------->
+
 <head>
   <title>Coffee Shop Connoisseur</title>
 </head>
@@ -31,7 +37,11 @@
 	<header>
 	  	<section class="headbar">
 	  		{{> login}}
-	  		<div class="logo"><img src="img/cc.png" /></div>
+	  		<div class="logo">
+	  			<a href="/">
+	  				<img src="img/cc.png" />
+	  			</a>
+	  		</div>
 	  	</section>
 	</header>
 </template>
@@ -103,11 +113,10 @@
 	{{> footer}}
 </template>
 
-<!-- ROUTE TEMPLATE: LOGIN-->
+<!-- ROUTE TEMPLATE: BACKEND-->
 <template name="backend">
 	{{> header}}
 	{{> admin}}
-	{{> footer}}
 </template>
 
 
@@ -128,7 +137,7 @@
 </template>
 
 
-<!-- ADD COFFEE SHOPS -->
+<!-- ADMIN AREA -->
 
 <template name="admin">
 
