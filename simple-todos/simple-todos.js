@@ -98,11 +98,14 @@ Meteor.methods({
   setChecked: function (taskId, setChecked) {
     Tasks.update(taskId, { $set: { checked: setChecked} });
   },
-  setPrivate: function (tastkId, setToPrivate) {
-	  if (task.owner !== Meteor.userId()) {
-		  throw new Meteor.Error("not-authorized");
-	  }
-	  
-	  Tasks.update(taskId, { $set: { private: setToPrivate } });
+  setPrivate: function (taskId, setToPrivate) {
+    var task = Tasks.findOne(taskId);
+ 
+    // Make sure only the task owner can make a task private
+    if (task.owner !== Meteor.userId()) {
+      throw new Meteor.Error("not-authorized");
+    }
+ 
+    Tasks.update(taskId, { $set: { private: setToPrivate } });
   }
 });
