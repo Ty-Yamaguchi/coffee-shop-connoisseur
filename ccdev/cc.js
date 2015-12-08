@@ -17,7 +17,7 @@ if (Meteor.isClient) {
 		return Cafes.find({}, {sort: {createdAt: -1}});    }
   });
   // Form Handler for submitting Coffee Shops to Mongo DB
-  Template.body.events({
+  Template.admin.events({
     "submit .new-cafe": function (event) {
       // Prevent default browser form submit
       event.preventDefault();
