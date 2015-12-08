@@ -27,7 +27,7 @@
 	<header>
 	  	<section class="headbar">
 	  		{{> login}}
-	  		<h1>Coffee Shop Connoisseur</h1>
+	  		<div class="logo"><img src="img/cc.png" /></div>
 	  	</section>
 	</header>
 </template>
@@ -50,12 +50,19 @@
 		{{#each Cafes}}
 		<li class="intro">
 			<div class="csphoto" style="background-image: url({{csimage}}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+			
 			<div class="cover">
-				<button class="delete">&times;</button> 
+				
+				{{#if currentUser}}
+					<button class="delete">&times;</button> 
+				{{/if}}
+
 				<h1 class="coffeeco">{{text}}</h1>
 				<span class="description">{{description}}</span><br>
 				<span class="placeid">{{placeid}}</span>
+				
 			</div>
+			
 			</div>
 		</li>
 		{{/each}}
@@ -95,6 +102,7 @@
 <!-- ADD COFFEE SHOPS -->
 
 <template name="admin">
+{{#if currentUser}}
    	<section class="cafeform"> 
    	  		
         <h3>Add A New Coffee Shop</h3>
@@ -108,5 +116,7 @@
     
     
    	</section>
+{{/if}}
+
 </template>
 

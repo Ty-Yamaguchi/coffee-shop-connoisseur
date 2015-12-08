@@ -36,11 +36,11 @@ body {
 }
 
 h1 {
-	font-size: 2.7em;
+	font-size: 2.3em;
 	font-family: "Avenir Next" Arial, sans-serif;
 	font-weight: 200;
 	padding: 0;
-	margin: 0;
+	margin: 0;	
 }
 
 h2 {
@@ -59,7 +59,14 @@ a{
 	text-decoration: none;
 }
 
-.logo {max-height: 80px; padding: 10px 0 0 0;}
+.logo {
+	position: absolute; 
+	top: 5px; 
+	right: 5px;
+}
+
+.logo img {max-height: 80px; 
+}
 
 .headbar {
 	width: 100%;
