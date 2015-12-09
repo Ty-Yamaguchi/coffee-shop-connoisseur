@@ -210,7 +210,11 @@ textarea {
 	box-shadow: none;
 	padding: 3px;
 	margin: 0;
-	
+	color: #444;
+	font-size: 1.1em;
+	font-weight: 300;
+	font-family: "Avenir Next", Arial, sans-serif;
+
 }
 
 
@@ -221,13 +225,14 @@ textarea {
 	box-shadow: none;
 	padding: 3px;
 	margin: 0;
+	color: #111;
 	
 }
 
 .appdata {
 	display: block;
 	margin: 0 0 5px 0;
-	color: #444;
+	color: #777;
 }
 
 /* ACCOUNTS UI */
@@ -264,7 +269,7 @@ textarea {
 
 #update_name{
 	display: inline-block; 
-	max-width: 50%;
+	max-width: 60%;
 	margin-top: 10px;
 	font-weight: 200;
 	font-size: 1.7em;

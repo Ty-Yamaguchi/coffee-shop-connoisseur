@@ -142,6 +142,7 @@ if (Meteor.isClient) {
 
 
 /********* METHODS *********/
+
 Meteor.methods({
 	addCafe : function (name, placeid, description, csimage) {
 		// Only continue if user is logged in
