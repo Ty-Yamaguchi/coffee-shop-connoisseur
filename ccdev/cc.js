@@ -103,6 +103,22 @@ Meteor.methods({
 			throw new Meteor.Error("not-authorized");
 		}	
 		Cafes.remove(id);
+	 },
+	 updateCafe : function (id, text, placeid, description, csimage) {
+		if (! Meteor.userId()) {
+			throw new Meteor.Error("not-authorized");
+		}
+    Cafes.update(id, {
+      $set: {
+      
+      	text: text,
+      	placeid : placeid,
+      	description : description,
+      	csimage : csimage
+	      
+      }
+    });
+			 
 	 }
 	    
 
