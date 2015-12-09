@@ -35,7 +35,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.04m;
+	font-size: 1.04em;
 	font-family: "Avenir Next" Arial, sans-serif;
 	font-weight: 200;
 	margin: 0;
@@ -81,7 +81,7 @@ strong {font-weight: 400;}
 	color: white;
 	text-align: center;
 	vertical-align: middle;
-	padding: 150px 0 0 0;
+	padding: 180px 0 0 0;
 	text-shadow: 0 0 5px black;
 
 }
@@ -177,7 +177,6 @@ textarea {
 	border: 1px solid #aaa;
 	margin-bottom: 5px;
 	width: 100%;
-	min-height: 200px;
 }
 
 .button {
@@ -188,16 +187,46 @@ textarea {
 	box-sizing: border-box;
 	width: 100%;
 	border: none;
+	margin: 10px 0;
 }
 
+.publish {display: none;}
 
 
 .admin-cafe-form {
 	margin: 20px;
 }
 
+.admin-cafe-form textarea {
+	min-height: 200px;
+}
+
+.cafe-update-form input,
+.cafe-update-form textarea  {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	padding: 3px;
+	margin: 0;
+	
+}
 
 
+.cafe-update-form input:focus,
+.cafe-update-form textarea:focus {
+	background: white;
+	border: none;
+	box-shadow: none;
+	padding: 3px;
+	margin: 0;
+	
+}
+
+.appdata {
+	display: block;
+	margin: 0 0 5px 0;
+	color: #444;
+}
 
 /* ACCOUNTS UI */
 
@@ -231,6 +260,17 @@ textarea {
 	font-weight: 400;
 }
 
+#update_name{
+	display: inline-block; 
+	max-width: 50%;
+	margin-top: 10px;
+	font-weight: 200;
+	font-size: 1.7em;
+	font-family: "Avenir Next" Arial, sans-serif;
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+
 .admin-cafe-list {
 	margin: 20px;
 	color: #999;
@@ -240,6 +280,28 @@ textarea {
 	line-height: 1.2em;
 }
 
-.delete {opacity: 0.3;}
+.admin-cafe-list .coffeeshop {margin: 30px 0;}
 
-.edit {float: right;}
+.delete { 
+	float: right;
+
+	padding: 8px; 
+	background: rgba(129,100,63, 1);
+	color: white;
+	font-size: 0.9em;
+	box-sizing: border-box;
+	width: 10%;
+	border: none;
+	margin-left: 5px;
+}
+
+.edit {
+	float: right;
+	padding: 8px; 
+	background: rgba(129,100,63, 1);
+	color: white;
+	font-size: 0.9em;
+	box-sizing: border-box;
+	width: 20%;
+	border: none;
+}

@@ -67,14 +67,8 @@
 			<div class="csphoto" style="background-image: url({{csimage}}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
 			
 			<div class="cover">
-				
-				{{#if currentUser}}
-					<button class="delete">&times;</button> 
-				{{/if}}
 
 				<h1 class="coffeeco">{{name}}</h1>
-				<span class="description">{{description}}</span><br>
-				<span class="placeid">{{placeid}}</span>
 				
 			</div>
 			
@@ -172,36 +166,33 @@
    	<ul class="admin-cafe-list"> 
    	
 	   	{{#each Cafes}}
-			<li class="coffeeshop">
-				<button class="delete" >&times;</button> 
-				<h3 class="admin-title">{{name}}</h3>
-				<button class="edit">Edit</button> 
-				<hr>
-				<div class="info">
-					<span><strong>Place ID:</strong> {{placeid}}</span><br>
-					<span><strong>Image URL:</strong> {{csimage}}</span><br>
-					<span><strong>Description:</strong> {{description}}</span><br>
-					<span><strong>Owner:</strong> {{owner}}</span><br>
-					<span><strong>Username:</strong> {{username}}</span><br>
-					<span><strong>ID:</strong> {{this._id}}</span><br>
-				</div>
-			</li>
+				<li class="coffeeshop">
 			
-			
-			<section class="cafe-update-form"> 
-   	  		
-			 	<form class="update-cafe">
-					<input type="text" name="name" placeholder="Name" value="{{name}}" disabled /><br>
-					<input type="text" name="placeid" placeholder="Google Place ID" value="{{placeid}}" /><br>
-					<input type="text" name="csimage" placeholder="Image URL" value="{{csimage}}"/><br>
-					<textarea type="text" name="description" placeholder="Description" value="{{description}}"></textarea><br>
-					<input type="hidden" name="id" placeholder="ID" value="{{this._id}}"/>
-					<button id="publish_{{this._id}}" class="button" type="submit">Publish Edits</button>
-				</form>
-    
-			</section>
-
-
+				<section class="cafe-update-form"> 
+	   	  		
+				 	<form class="update-cafe">
+										
+						<input id="update_name" type="text" name="name" placeholder="Name" value="{{name}}" disabled />
+						<button class="delete" >&times;</button> 
+						<button id="edit_{{this._id}}" class="edit">Edit</button> 
+						<hr>
+					
+					
+						<input id="update_placeid" type="text" name="placeid" placeholder="Google Place ID" value="{{placeid}}" disabled /><br>
+						<input id="update_csimage" type="text" name="csimage" placeholder="Image URL" value="{{csimage}}" disabled/><br>
+						<textarea id="update_description" type="text" name="description" placeholder="Description" value="{{description}}" disabled></textarea><br>
+						<input type="hidden" name="id" placeholder="ID" value="{{this._id}}"/>
+													
+							<span class="appdata">Application Data: </span>
+							<span><strong>Owner:</strong> {{owner}}</span><br>
+							<span><strong>Username:</strong> {{username}}</span><br>
+							<span><strong>ID:</strong> {{this._id}}</span><br>
+								
+						<button id="publish_{{this._id}}" class="publish button" type="submit">Publish Edits</button>
+					</form>
+					
+				</section>
+				</li>
 
 		{{/each}}
 
