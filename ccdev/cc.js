@@ -15,6 +15,10 @@ Router.route('/post/:_id', function () {
 
 });
 
+Router.route('/edit', function () {
+  this.render('edit');
+});
+
 /********* MONGO DB *********/
 
 Cafes = new Mongo.Collection("cafes");
@@ -40,7 +44,7 @@ if (Meteor.isClient) {
       event.preventDefault();
  
       // Get value from form element
-      var text = event.target.text.value;
+      var name = event.target.name.value;
       var placeid = event.target.placeid.value;
       var description = event.target.description.value;
       var csimage = event.target.csimage.value;
@@ -51,15 +55,55 @@ if (Meteor.isClient) {
 
  
       // Insert a cafe into the collection
-      Meteor.call("addCafe", text, placeid, description, csimage);
+      Meteor.call("addCafe", name, placeid, description, csimage);
  
       // Clear form
-      event.target.text.value = "";
+      event.target.name.value = "";
       event.target.placeid.value = "";
       event.target.description.value = "";
       event.target.csimage.value = "";
     }
   });
+  
+  
+  
+  
+
+
+
+		
+  // Form Handler for updating Coffee Shops in Mongo DB
+  Template.admin.events({
+  
+  "click .edit": function (event) {
+		event.preventDefault();
+		
+	},	
+		
+    "submit .update-cafe": function (event) {
+      // Prevent default browser form submit
+      event.preventDefault();
+ 
+      // Get value from form element
+      var name = event.target.name.value;
+      var placeid = event.target.placeid.value;
+      var description = event.target.description.value;
+      var csimage = event.target.csimage.value;
+      var id = event.target.id.value;
+
+     /*
+ var owner = Meteor.userId();
+      var username = Meteor.user().username;
+*/
+
+ 
+      // Update cafe into the collection
+      Meteor.call("updateCafe", id, name, placeid, description, csimage);
+
+    }
+  });
+
+
   	// Delete Function for removing Coffee Shops from Mongo DB
 	Template.cafe.events({
     "click .delete": function () {
@@ -82,14 +126,14 @@ if (Meteor.isClient) {
 
 /********* METHODS *********/
 Meteor.methods({
-	addCafe : function (text, placeid, description, csimage) {
+	addCafe : function (name, placeid, description, csimage) {
 		// Only continue if user is logged in
 		if (! Meteor.userId()) {
 			throw new Meteor.Error("not-authorized");
 		}	
     // Insert a cafe into the collection
     Cafes.insert({
-      text: text,
+      name: name,
       placeid: placeid,
       description: description,
       csimage: csimage,
@@ -104,14 +148,14 @@ Meteor.methods({
 		}	
 		Cafes.remove(id);
 	 },
-	 updateCafe : function (id, text, placeid, description, csimage) {
+	 updateCafe : function (id, name, placeid, description, csimage) {
 		if (! Meteor.userId()) {
 			throw new Meteor.Error("not-authorized");
 		}
     Cafes.update(id, {
       $set: {
       
-      	text: text,
+      	name: name,
       	placeid : placeid,
       	description : description,
       	csimage : csimage

@@ -63,7 +63,7 @@
 <template name="cafe">
 	<ul>	
 		{{#each Cafes}}
-		<li class="intro">
+		<li class="coffeeshop">
 			<div class="csphoto" style="background-image: url({{csimage}}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
 			
 			<div class="cover">
@@ -72,7 +72,7 @@
 					<button class="delete">&times;</button> 
 				{{/if}}
 
-				<h1 class="coffeeco">{{text}}</h1>
+				<h1 class="coffeeco">{{name}}</h1>
 				<span class="description">{{description}}</span><br>
 				<span class="placeid">{{placeid}}</span>
 				
@@ -90,27 +90,8 @@
 <!-- COFFEE SHOP LIST -->
  
 <template name="details">
-	{{#each Cafes}}
-		<ul>
-		<li class="intro">
-			<div class="csphoto" style="background-image: url({{csimage}}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
-			
-			<div class="cover">
-				
-				{{#if currentUser}}
-					<button class="delete">&times;</button> 
-				{{/if}}
-
-				<h1 class="coffeeco">{{text}}</h1>
-				<span class="description">{{description}}</span><br>
-				<span class="placeid">{{placeid}}</span>
-				
-			</div>
-			
-			</div>
-		</li>
-		</ul>
-	{{/each}}
+	
+	<!-- Will show single coffee shop details page... -->
 
 </template>
 
@@ -143,16 +124,24 @@
 	{{> footer}}
 </template>
 
+<!-- ROUTE TEMPLATE: SINGLE-->
+
+<template name="single">
+	{{> details}}
+</template>
+
 <!-- ROUTE TEMPLATE: BACKEND-->
 <template name="backend">
 	{{> header}}
 	{{> admin}}
 </template>
 
-<template name="single">
-	{{> details}}
-</template>
+<!-- ROUTE TEMPLATE: EDIT-->
 
+<template name="edit">
+	{{> header}}
+	{{> editor}}
+</template>
 
 
 
@@ -183,17 +172,37 @@
    	<ul class="admin-cafe-list"> 
    	
 	   	{{#each Cafes}}
-			<li class="intro">
-				<button class="delete">&times;</button> 
-				<h3 class="admin-title">{{text}}</h3>
+			<li class="coffeeshop">
+				<button class="delete" >&times;</button> 
+				<h3 class="admin-title">{{name}}</h3>
+				<button class="edit">Edit</button> 
 				<hr>
-				<span><strong>Place ID:</strong> {{placeid}}</span><br>
-				<span><strong>Image URL:</strong> {{csimage}}</span><br>
-				<span><strong>Description:</strong> {{description}}</span><br>
-				<span><strong>Owner:</strong> {{owner}}</span><br>
-				<span><strong>Username:</strong> {{username}}</span><br>
-				<span><strong>ID:</strong> {{this._id}}</span><br>
+				<div class="info">
+					<span><strong>Place ID:</strong> {{placeid}}</span><br>
+					<span><strong>Image URL:</strong> {{csimage}}</span><br>
+					<span><strong>Description:</strong> {{description}}</span><br>
+					<span><strong>Owner:</strong> {{owner}}</span><br>
+					<span><strong>Username:</strong> {{username}}</span><br>
+					<span><strong>ID:</strong> {{this._id}}</span><br>
+				</div>
 			</li>
+			
+			
+			<section class="cafe-update-form"> 
+   	  		
+			 	<form class="update-cafe">
+					<input type="text" name="name" placeholder="Name" value="{{name}}" disabled /><br>
+					<input type="text" name="placeid" placeholder="Google Place ID" value="{{placeid}}" /><br>
+					<input type="text" name="csimage" placeholder="Image URL" value="{{csimage}}"/><br>
+					<textarea type="text" name="description" placeholder="Description" value="{{description}}"></textarea><br>
+					<input type="hidden" name="id" placeholder="ID" value="{{this._id}}"/>
+					<button id="publish_{{this._id}}" class="button" type="submit">Publish Edits</button>
+				</form>
+    
+			</section>
+
+
+
 		{{/each}}
 
 	</ul>
@@ -202,9 +211,9 @@
 
    	<section class="admin-cafe-form"> 
    	  		
-        <h3 class="addnew">Add A New Coffee Shop</h3>
+        <h3 class="formtitle">Add A New Coffee Shop</h3>
 	 	<form class="new-cafe">
-			<input type="text" name="text" placeholder="Name" /><br>
+			<input type="text" name="name" placeholder="Name" /><br>
 			<input type="text" name="placeid" placeholder="Google Place ID" /><br>
 			<input type="text" name="csimage" placeholder="Image URL" /><br>
 			<textarea type="text" name="description" placeholder="Description"></textarea><br>
@@ -216,4 +225,29 @@
 {{/if}}
 
 </template>
+
+
+
+
+<!-- EDIT COFFESHOP FORM-->
+ 
+<template name="editor">
+
+   	<!--
+<section class="admin-cafe-form"> 
+   	  		
+        <h3 class="formtitle">Edit Coffee Shop</h3>
+	 	<form class="new-cafe">
+			<input type="text" name="name" placeholder="Name" value="" /><br>
+			<input type="text" name="placeid" placeholder="Google Place ID" value="" /><br>
+			<input type="text" name="csimage" placeholder="Image URL" value=""/><br>
+			<textarea type="text" name="description" placeholder="Description" value=""></textarea><br>
+			<button class="button" type="submit">Publish Edits</button>
+		</form>
+    
+   	</section>
+-->
+
+</template>
+
 

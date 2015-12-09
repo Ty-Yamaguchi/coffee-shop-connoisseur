@@ -91,7 +91,7 @@ strong {font-weight: 400;}
 	height: 400px;
 }
 
-.intro {
+.coffeeshop {
 	padding: 10px 10px 0 10px;
 }
 .cover {width: 100%;
@@ -147,10 +147,15 @@ ul {list-style-type: none;}
  
  *****************************************************/
 
-
-.addnew {text-align: center; padding: 10px; border-bottom: 1px solid #aaa; margin-bottom: 10px;}
-
 /* FORMS UI */
+
+
+.formtitle {
+	text-align: center; 
+	padding: 10px; 
+	border-bottom: 1px solid #aaa; 
+	margin-bottom: 10px;
+}
 
 input {
 	background: rgba(255,255,255,0.7);
@@ -236,3 +241,5 @@ textarea {
 }
 
 .delete {opacity: 0.3;}
+
+.edit {float: right;}
