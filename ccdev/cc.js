@@ -44,10 +44,12 @@ if (Meteor.isClient) {
       var placeid = event.target.placeid.value;
       var description = event.target.description.value;
       var csimage = event.target.csimage.value;
+      var owner = Meteor.userId();
+      var username = Meteor.user().username;
 
  
       // Insert a cafe into the collection
-      Meteor.call("addCafe", text, placeid, description, csimage);
+      Meteor.call("addCafe", text, placeid, description, csimage, owner, username);
  
       // Clear form
       event.target.text.value = "";
@@ -78,22 +80,22 @@ if (Meteor.isClient) {
 
 /********* METHODS *********/
 Meteor.methods({
-	addCafe : function (text, placeid, description, csimage) {
-	
-			// Only continue if user is logged in
-			if (! Meteor.userId()) {
-				throw new Meteor.Error("not-authorized");
-			}	
-      // Insert a cafe into the collection
-      Cafes.insert({
-        text: text,
-        placeid: placeid,
-        description: description,
-        csimage: csimage,
-        createdAt: new Date(), // current time
-        	//owner: Meteor.userID(),
-        	//username: Meteor.user().username
-      });
-    }
+	addCafe : function (text, placeid, description, csimage, owner, username) {
+		// Only continue if user is logged in
+		if (! Meteor.userId()) {
+			throw new Meteor.Error("not-authorized");
+		}	
+    // Insert a cafe into the collection
+    Cafes.insert({
+      text: text,
+      placeid: placeid,
+      description: description,
+      csimage: csimage,
+      createdAt: new Date(), // current time
+      owner: owner,
+      username: username
+    });
+   },
+	    
 
 });
