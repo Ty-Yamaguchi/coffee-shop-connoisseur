@@ -63,13 +63,13 @@ if (Meteor.isClient) {
   	// Delete Function for removing Coffee Shops from Mongo DB
 	Template.cafe.events({
     "click .delete": function () {
-      Cafes.remove(this._id);
+      Meteor.call("removeCafe", this._id);
 	  }
 	});
 	
 	Template.admin.events({
     "click .delete": function () {
-      Cafes.remove(this._id);
+      Meteor.call("removeCafe", this._id);
 	  }
 	});
 
@@ -98,6 +98,12 @@ Meteor.methods({
       username: Meteor.user().username
     });
    },
+	 removeCafe : function (id) {
+		if (! Meteor.userId()) {
+			throw new Meteor.Error("not-authorized");
+		}	
+		Cafes.remove(id);
+	 }
 	    
 
 });
