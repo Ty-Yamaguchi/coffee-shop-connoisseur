@@ -64,15 +64,17 @@
 	<ul>	
 		{{#each Cafes}}
 		<li class="coffeeshop">
-			<div class="csphoto" style="background-image: url({{csimage}}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
-			
-			<div class="cover">
-
-				<h1 class="coffeeco">{{name}}</h1>
+			<a href="/coffeeshop/view/{{this._id}}">
+				<div class="csphoto" style="background-image: url({{csimage}}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
 				
-			</div>
-			
-			</div>
+					<div class="cover">
+		
+						<h1 class="coffeeco">{{name}}</h1>
+						
+					</div>
+				
+				</div>
+			</a>
 		</li>
 		{{/each}}
 	</ul>
@@ -167,7 +169,7 @@
    	
 	   	{{#each Cafes}}
 				<li class="coffeeshop">
-			
+					
 				<section class="cafe-update-form"> 
 	   	  		
 				 	<form class="update-cafe">
