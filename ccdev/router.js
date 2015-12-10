@@ -42,6 +42,13 @@ Router.route('/coffeeshop/view/:_id', {
 Router.route('/coffeeshop/list', {
 	name:'coffeeshopList',
 	data: function(){
-		return Cafes.find();
+		var cafeList = Cafes.find(
+			{
+				_id: this.params._id
+			}
+		);
+		return {
+			cafe: cafeList
+		}
 	}
 });

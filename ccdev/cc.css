@@ -106,13 +106,10 @@ strong {font-weight: 400;}
 	transition: 1s;
 }
 
-.description,
-.placeid {
-	padding: 20px 0 0;
+.details {
+	padding: 20px;
 	display: block;
-	text-align: center;
-	color: #aaa;
-	opacity: 0.3;
+	color: #444;
 }
 
 
