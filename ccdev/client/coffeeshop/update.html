@@ -1,0 +1,11 @@
+<template name="coffeeshopUpdate">
+	<h1>Update Cafe</h1>
+	<form class="new-cafe" hook="update-cafe-form">
+			<input type="text" name="name" placeholder="Name" value="{{name}}" /><br>
+			<input type="text" name="placeid" placeholder="Google Place ID" value="{{placeid}}" /><br>
+			<input type="text" name="csimage" placeholder="Image URL" value="{{csimage}}" /><br>
+			<textarea type="text" name="description" placeholder="Description" value="{{description}}"></textarea><br>
+			<button class="button" type="submit">Update Coffee Shop</button>
+			<a href="#" hook="delete-cafe" style="color: red">Delete this cafe permanently</a>
+	</form>
+</template>

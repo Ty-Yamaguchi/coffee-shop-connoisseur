@@ -15,6 +15,8 @@ Router.route('/post/:_id', function () {
 
 });
 
+
+
 Router.route('/edit', function () {
   this.render('edit');
 });
