@@ -81,10 +81,10 @@ if (Meteor.isClient) {
   		event.preventDefault();
   		document.getElementById("publish_" + this._id).style.display = "block";
   		document.getElementById("edit_" + this._id).style.display = "none";
-  		document.getElementById("update_name").removeAttribute("disabled");
-  		document.getElementById("update_placeid").removeAttribute("disabled");
-  		document.getElementById("update_csimage").removeAttribute("disabled");
-  		document.getElementById("update_description").removeAttribute("disabled");
+  		document.getElementById(this._id + "_name").removeAttribute("disabled");
+  		document.getElementById(this._id + "_placeid").removeAttribute("disabled");
+  		document.getElementById(this._id + "_csimage").removeAttribute("disabled");
+  		document.getElementById(this._id + "_description").removeAttribute("disabled");
 	},	
 		
 		
@@ -113,10 +113,10 @@ if (Meteor.isClient) {
 
   		document.getElementById("edit_" + this._id).style.display = "block";
   		document.getElementById("publish_" + this._id).style.display = "none";
-  		document.getElementById("update_name").setAttribute('disabled', 'disabled');
-  		document.getElementById("update_placeid").setAttribute('disabled', 'disabled');
-  		document.getElementById("update_csimage").setAttribute('disabled', 'disabled');
-  		document.getElementById("update_description").setAttribute('disabled', 'disabled');
+  		document.getElementById(this._id + "_name").setAttribute('disabled', 'disabled');
+  		document.getElementById(this._id + "_placeid").setAttribute('disabled', 'disabled');
+  		document.getElementById(this._id + "_csimage").setAttribute('disabled', 'disabled');
+  		document.getElementById(this._id + "_description").setAttribute('disabled', 'disabled');
 
 
     }
