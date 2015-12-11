@@ -34,11 +34,12 @@ h2 {
 }
 
 h3 {
-	font-size: 1.04em;
+	font-size: 1.4em;
 	font-family: "Avenir Next", Arial, sans-serif;
 	font-weight: 200;
 	margin: 0;
 	padding: 0;
+	display: inline;
 }
 
 a{
@@ -70,6 +71,15 @@ strong {font-weight: 400;}
 .headbar h1{
 	padding: 20px 0 0 0;
 }
+
+
+
+/* FLOATS */
+
+
+.right {float: right;}
+.left {float: left;}
+
 
 
 
@@ -201,12 +211,14 @@ textarea {
 }
 
 .button {
+	display: inline-block;
+	text-align: center;
 	padding: 20px; 
 	background: rgba(129,100,63, 1);
 	color: white;
 	font-size: 0.9em;
 	box-sizing: border-box;
-	min-width: 100%;
+	width: 100%;
 	border: none;
 	margin: 10px 0;
 }
@@ -308,21 +320,9 @@ textarea {
 
 .admin-cafe-list .coffeeshop {margin: 30px 0;}
 
-.delete { 
+.edit { 
 	float: right;
-
-	padding: 8px; 
-	background: rgba(129,100,63, 1);
-	color: white;
-	font-size: 0.9em;
-	box-sizing: border-box;
-	width: 10%;
-	border: none;
-	margin-left: 5px;
-}
-
-.edit {
-	float: right;
+	text-align: center;
 	padding: 8px; 
 	background: rgba(129,100,63, 1);
 	color: white;
@@ -330,4 +330,7 @@ textarea {
 	box-sizing: border-box;
 	width: 20%;
 	border: none;
+	margin-left: 5px;
 }
+
+.delete {background: #b00000;}

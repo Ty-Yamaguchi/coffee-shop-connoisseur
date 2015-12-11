@@ -52,3 +52,17 @@ Router.route('/coffeeshop/list', {
 		}
 	}
 });
+
+// CRUD: delete coffeeshop
+Router.route('/coffeeshop/delete/:_id', {
+	name: 'coffeeshopDelete',
+	data: function(){
+		return Cafes.findOne(
+			{
+				_id: this.params._id
+			}
+		);
+	}
+	
+})
+
