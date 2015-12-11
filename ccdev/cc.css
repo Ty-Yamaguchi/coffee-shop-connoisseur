@@ -89,6 +89,9 @@ strong {font-weight: 400;}
 .csphoto {
 	width: 100%;
 	height: 400px;
+	background-repeat: no-repeat; 
+	background-position: center center; 
+	background-size: cover;
 }
 
 .coffeeshop {

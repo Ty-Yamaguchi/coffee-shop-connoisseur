@@ -8,18 +8,6 @@ Router.route('/backend', function () {
   this.render('backend');
 });
 
-Router.route('/post/:_id', function () {
-  var params = this.params; // { _id: "5" }
-  var id = params._id; // "5"
-    this.render('details');
-
-});
-
-
-
-Router.route('/edit', function () {
-  this.render('edit');
-});
 
 /********* MONGO DB *********/
 
@@ -76,18 +64,7 @@ if (Meteor.isClient) {
 		
   // Form Handler for updating Coffee Shops in Mongo DB
   Template.admin.events({
-  
-  	"click .edit": function (event) {  		
-  		event.preventDefault();
-  		document.getElementById("publish_" + this._id).style.display = "block";
-  		document.getElementById("edit_" + this._id).style.display = "none";
-  		document.getElementById(this._id + "_name").removeAttribute("disabled");
-  		document.getElementById(this._id + "_placeid").removeAttribute("disabled");
-  		document.getElementById(this._id + "_csimage").removeAttribute("disabled");
-  		document.getElementById(this._id + "_description").removeAttribute("disabled");
-	},	
-		
-		
+	
     "submit .update-cafe": function (event) {
       // Prevent default browser form submit
       event.preventDefault();
@@ -109,18 +86,14 @@ if (Meteor.isClient) {
       Meteor.call("updateCafe", id, name, placeid, description, csimage);
 
 
-      // Show Edit Button / Hide Publish Button + Set Form Input Attributes to disabled
-
-  		document.getElementById("edit_" + this._id).style.display = "block";
-  		document.getElementById("publish_" + this._id).style.display = "none";
-  		document.getElementById(this._id + "_name").setAttribute('disabled', 'disabled');
-  		document.getElementById(this._id + "_placeid").setAttribute('disabled', 'disabled');
-  		document.getElementById(this._id + "_csimage").setAttribute('disabled', 'disabled');
-  		document.getElementById(this._id + "_description").setAttribute('disabled', 'disabled');
+  
+	 
+  	
 
 
     }
   });
+
 
 
   	// Delete Function for removing Coffee Shops from Mongo DB
