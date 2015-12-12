@@ -1,7 +1,7 @@
 <template name="coffeeshopUpdate">
 	<section class="admin-cafe-form">
 		<h1>Edit Coffee Shop</h1>
-		<form class="new-cafe" hook="update-cafe-form">
+		<form class="update-cafe" hook="update-cafe-form">
 				<label for="name">Name: </label>
 				<input type="text" id="name" name="name" placeholder="Name" value="{{name}}" /><br>
 				<label for="placeid">Place ID: </label>
@@ -10,7 +10,7 @@
 				<input type="text" id="csimage" name="csimage" placeholder="Image URL" value="{{csimage}}" /><br>
 				<label for="csimage">Description: </label>
 				<textarea type="text" id="description" name="description" placeholder="Description" value="{{description}}"></textarea><br>
-				<button class="update button" type="submit">Update Coffee Shop</button>
+				<button class="button" type="submit">Update Coffee Shop</button>
 				<a href="#" hook="delete-cafe" class="delete button">Delete Coffee Shop</a>
 		</form>
 	</section>

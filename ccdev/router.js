@@ -1,29 +1,25 @@
-/**
- * Router options
- */
+// ROUTER OPTIONS
 Router.configure({
     layoutTemplate: 'layout'
 });
 
-// CRUD: create coffeeshop
+
+
+// MAIN ROUTE: WELCOME
+
+Router.route('/', function () {
+  this.render('welcome');
+});
+
+
+
+// CRUD: CREATE COFFEESHOP
 Router.route('/coffeeshop/create', {
 	name: 'coffeeshopCreate'
 });
 
-// CRUD: update coffeeshop
-Router.route('/coffeeshop/update/:_id', {
-	name: 'coffeeshopUpdate',
-	data: function(){
-		return Cafes.findOne(
-			{
-				_id: this.params._id
-			}
-		);
-	}
-	
-})
 
-// CRUD: read coffeeshop (single)
+// CRUD: READ COFFEESHOP (SINGLE)
 Router.route('/coffeeshop/view/:_id', {
 	name: 'coffeeshopView',
 	data: function(){
@@ -38,7 +34,7 @@ Router.route('/coffeeshop/view/:_id', {
 	}
 });
 
-// CRUD: read coffeeshop (list)
+// CRUD: READ COFFEESHOP LIST
 Router.route('/coffeeshop/list', {
 	name:'coffeeshopList',
 	data: function(){
@@ -53,7 +49,37 @@ Router.route('/coffeeshop/list', {
 	}
 });
 
-// CRUD: delete coffeeshop
+// CRUD: READ COFFEESHOP LIST (ADMIN)
+Router.route('/admin', {
+	name:'admin',
+	data: function(){
+		var cafeList = Cafes.find(
+			{
+				_id: this.params._id
+			}
+		);
+		return {
+			cafe: cafeList
+		}
+	}
+});
+
+
+// CRUD: UPDATE
+Router.route('/coffeeshop/update/:_id', {
+	name: 'coffeeshopUpdate',
+	data: function(){
+		return Cafes.findOne(
+			{
+				_id: this.params._id
+			}
+		);
+	}
+	
+})
+
+
+// CRUD: DELETE COFFEESHOP
 Router.route('/coffeeshop/delete/:_id', {
 	name: 'coffeeshopDelete',
 	data: function(){
