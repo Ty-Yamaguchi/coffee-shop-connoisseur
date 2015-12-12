@@ -38,10 +38,7 @@ Meteor.methods({
 		      
 	      }
 	    });
-	    
-	    console.log('word/.');
 			 
-	 }
-	    
+	 }	    
 
 });
