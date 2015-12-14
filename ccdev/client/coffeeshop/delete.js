@@ -2,7 +2,10 @@
   Template.coffeeshopDelete.events({
 	
     
-	 'click [hook="delete-cafe"]': function (event) {
+	 'click [hook="delete-cafe"]': function (eventObject, templateObject) {
+	  
+	  // Prevent Default Click Event		
+	  event.preventDefault()
 	  
       Meteor.call("removeCafe", this._id);	
        	 

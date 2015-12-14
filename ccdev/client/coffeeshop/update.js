@@ -15,6 +15,10 @@ Template.coffeeshopUpdate.events({
 		// Insert a cafe into the collection
 		Meteor.call("updateCafe", id, name, placeid, description, csimage);
 		
+		
+		// Redirect to Admin Route		
+		Router.go("/admin");
+		
 	}
 	
 });

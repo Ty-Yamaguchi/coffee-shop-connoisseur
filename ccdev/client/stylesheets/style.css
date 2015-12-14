@@ -7,7 +7,7 @@
 /* BODY */
 
 
-body, ul, li {
+body, ul, li, h1, h2, h3, a, p, strong, input {
 	margin: 0; 
 	padding: 0;
 }
@@ -16,7 +16,7 @@ body, ul, li {
 body {
 	background: #eee;
 	font-family: "Avenir Next", Arial, sans-serif;
-
+	margin-bottom: 80px; /* Offset fixed footer. */
 }
 
 h1 {
@@ -139,7 +139,7 @@ ul {list-style-type: none;}
 	color: white;
 	text-align: center;
 	margin: 10px 0 0 0;
-	padding: 30px; 
+	padding: 25px; 
 	box-sizing: border-box;
 	position: fixed;
 	bottom: 0;
@@ -169,7 +169,7 @@ ul {list-style-type: none;}
 	margin: 0 auto;
 }
 
-
+.description {margin: 20px 0;}
 
 
 
@@ -216,6 +216,8 @@ textarea {
 	border: none;
 	margin: 10px 0;
 }
+
+.half {width: 49%;}
 
 .publish {display: none;}
 
