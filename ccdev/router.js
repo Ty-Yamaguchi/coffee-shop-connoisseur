@@ -101,3 +101,4 @@ var requireLogin = function() {
 }
 
 Router.onBeforeAction(requireLogin, {only: 'coffeeshopUpdate'});
+Router.onBeforeAction(requireLogin, {only: 'admin'});
