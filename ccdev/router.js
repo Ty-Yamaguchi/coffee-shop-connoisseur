@@ -1,6 +1,6 @@
 // ROUTER OPTIONS
 Router.configure({
-    layoutTemplate: 'layout'
+    layoutTemplate: 'layout',
 });
 
 
@@ -76,7 +76,7 @@ Router.route('/coffeeshop/update/:_id', {
 		);
 	}
 	
-})
+});
 
 
 // CRUD: DELETE COFFEESHOP
@@ -90,5 +90,14 @@ Router.route('/coffeeshop/delete/:_id', {
 		);
 	}
 	
-})
+});
 
+var requireLogin = function() {
+  if (! Meteor.user()) {
+    this.render('accessDenied');
+  } else {
+    this.next();
+  }
+}
+
+Router.onBeforeAction(requireLogin, {only: 'coffeeshopUpdate'});
