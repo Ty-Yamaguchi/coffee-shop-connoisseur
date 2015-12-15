@@ -1,6 +1,7 @@
 // ROUTER OPTIONS
 Router.configure({
     layoutTemplate: 'layout',
+    notFoundTemplate: 'notFound'
 });
 
 
