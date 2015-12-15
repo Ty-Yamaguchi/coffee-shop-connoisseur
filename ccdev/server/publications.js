@@ -1,4 +1,7 @@
 //Publish Cafes collection 
 Meteor.publish('cafes' , function(){
-	return Cafes.find();
+	return Cafes.find({}, {fields: {
+		owner: false,
+		username: false
+	}});
 });
