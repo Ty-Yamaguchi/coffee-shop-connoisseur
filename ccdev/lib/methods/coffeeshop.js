@@ -1,22 +1,24 @@
 /********* METHODS *********/
 
 Meteor.methods({
-	addCafe : function (name, placeid, description, csimage) {
+	addCafe : function (cafeAttributes) {
 		// Only continue if user is logged in
-		if (! Meteor.userId()) {
-			throw new Meteor.Error("not-authorized");
-		}	
+		check(Meteor.userId(), String);
+		check(cafeAttributes, {
+  		name: String,
+  		placeid: String,
+  		description: String,
+  		csimage: String
+		});
+		var user = Meteor.user();
+		var cafe = _.extend(cafeAttributes, {
+  		owner: user._id,
+  		username: user.username,
+  		createdAt: new Date()
+		});
 	    // Insert a cafe into the collection
-	    Cafes.insert({
-	      name: name,
-	      placeid: placeid,
-	      description: description,
-	      csimage: csimage,
-	      createdAt: new Date(), // current time
-	      owner: Meteor.userId(),
-	      username: Meteor.user().username
-	    });
-	   },
+	    Cafes.insert(cafe);
+  },
 	   
 	removeCafe : function (id) {
 		if (! Meteor.userId()) {

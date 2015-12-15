@@ -12,7 +12,13 @@ Template.coffeeshopCreate.events({
 		var csimage = event.target.csimage.value;
 		
 		// Insert a cafe into the collection
-		Meteor.call("addCafe", name, placeid, description, csimage);
+		var cafeAttributes = {
+  		name: name,
+  		placeid: placeid,
+  		description: description,
+  		csimage: csimage
+		};
+		Meteor.call("addCafe", cafeAttributes);
 		
 		// Clear form
 		event.target.name.value = "";
