@@ -18,18 +18,14 @@ Template.coffeeshopCreate.events({
   		description: description,
   		csimage: csimage
 		};
-		Meteor.call("addCafe", cafeAttributes);
-		
-		// Clear form
-		event.target.name.value = "";
-		event.target.placeid.value = "";
-		event.target.description.value = "";
-		event.target.csimage.value = "";
-
-		// Redirect to Admin Route		
-		Router.go("/admin");
+		Meteor.call("addCafe", cafeAttributes, function(error, result){
+  		if (error) {
+    		return alert(error.reason);
+  		}
+  		// Redirect to Admin Route		
+  		Router.go('coffeeshopView', {_id: result._id});
+  		
+		});
 	}
 	
 });
-
-

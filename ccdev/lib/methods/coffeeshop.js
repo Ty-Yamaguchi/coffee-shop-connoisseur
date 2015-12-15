@@ -16,8 +16,11 @@ Meteor.methods({
   		username: user.username,
   		createdAt: new Date()
 		});
-	    // Insert a cafe into the collection
-	    Cafes.insert(cafe);
+    // Insert a cafe into the collection
+    var cafeId = Cafes.insert(cafe);
+    return {
+      _id: cafeId
+    };
   },
 	   
 	removeCafe : function (id) {
