@@ -8,7 +8,7 @@
         <input type="text" id="csimage" name="csimage" placeholder="Image URL" value="{{csimage}}" /><br>
         <label for="csimage">Description: </label>
         <textarea type="text" id="description" name="description" placeholder="Description" value="{{description}}"></textarea><br>
-        {{if _id}}
+        {{#if _id}}
             <button class="button" id="update-coffeeshop" type="submit">Update Coffee Shop</button>
             <a href="#" hook="delete-cafe" class="delete button" id="delete">Delete Coffee Shop</a>
         {{else}}
