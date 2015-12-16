@@ -1,5 +1,5 @@
-//Coffeeshop List View Helper
-  Template.coffeeshopList.helpers({
+//Admin List View Helper
+  Template.admin.helpers({
     Cafes: function () {
 		return Cafes.find({}, {sort: {createdAt: -1}});    }
   });
