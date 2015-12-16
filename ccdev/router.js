@@ -4,21 +4,15 @@ Router.configure({
     notFoundTemplate: 'notFound'
 });
 
-
-
 // MAIN ROUTE: WELCOME
-
 Router.route('/', function () {
   this.render('welcome');
 });
-
-
 
 // CRUD: CREATE COFFEESHOP
 Router.route('/coffeeshop/create', {
 	name: 'coffeeshopCreate'
 });
-
 
 // CRUD: READ COFFEESHOP (SINGLE)
 Router.route('/coffeeshop/view/:_id', {
@@ -93,13 +87,13 @@ Router.route('/coffeeshop/delete/:_id', {
 	
 });
 
+// Before action hook to force login
 var requireLogin = function() {
-  if (! Meteor.user()) {
-    this.render('accessDenied');
-  } else {
-    this.next();
-  }
+	if (! Meteor.user()) {
+		this.render('accessDenied');
+	} else {
+		this.next();
+	}
 }
 
-Router.onBeforeAction(requireLogin, {only: 'coffeeshopUpdate'});
-Router.onBeforeAction(requireLogin, {only: 'admin'});
+Router.onBeforeAction(requireLogin, {only: ['coffeeshopUpdate','admin']});
