@@ -1,9 +1,9 @@
 //CREATE NEW COFFEESHOP ENTRY IN MONGO DB
 Template.coffeeshopCreate.events({
-	'submit [hook="new-cafe-form"]': function(eventObject,templateObject){
+	'submit [hook="new-cafe-form"]': function(event,template){
 
 		// Prevent default browser form submit
-		eventObject.preventDefault();
+		event.preventDefault();
 		
 		// Get value from form element
 		var name = event.target.name.value;
@@ -26,6 +26,7 @@ Template.coffeeshopCreate.events({
   		Router.go('coffeeshopView', {_id: result._id});
   		
 		});
+
 	}
 	
 });

@@ -1,9 +1,9 @@
 //CREATE NEW COFFEESHOP ENTRY IN MONGO DB
 Template.coffeeshopUpdate.events({
-	'submit [hook="update-cafe-form"]': function(eventObject,templateObject){
+	'submit [hook="update-cafe-form"]': function(event, template){
 
 		// Prevent default browser form submit
-		eventObject.preventDefault();
+		event.preventDefault();
 		
 		var id = this._id;
 		// Get value from form element
@@ -17,8 +17,25 @@ Template.coffeeshopUpdate.events({
 		
 		
 		// Redirect to Admin Route		
-		Router.go("/admin");
+		Router.go('admin');
 		
+	},	
+    
+	 'click [hook="delete-cafe"]': function (event, template) {
+		
+		// Prevent Default Click Event		
+		event.preventDefault();
+		
+		//Ask user if they want to delete Coffeeshop
+		if (confirm('Permanently delete Coffeeshop?')) {
+		
+		  	 //Delete Coffeeshop from 
+		  	 Meteor.call("removeCafe", this._id);
+		  	 
+		  	 //Redirect to Admin Route 
+		  	 Router.go('admin');	
+		
+		}
 	}
 	
 });
