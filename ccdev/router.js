@@ -1,7 +1,13 @@
 // ROUTER OPTIONS
 Router.configure({
     layoutTemplate: 'layout',
-    notFoundTemplate: 'notFound'
+    notFoundTemplate: 'notFound',
+	loadingTemplate: 'loading',
+	waitOn: function(){
+		return [
+			Meteor.subscribe('cafes')
+		]
+	}
 });
 
 // MAIN ROUTE: WELCOME

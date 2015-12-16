@@ -1,2 +1,2 @@
 //Subscribe to Cafes collection
-Meteor.subscribe('cafes');
+//Meteor.subscribe('cafes');
