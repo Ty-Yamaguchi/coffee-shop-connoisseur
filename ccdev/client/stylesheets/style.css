@@ -17,7 +17,6 @@ body {
 	background: #eee;
 	font-family: "Avenir Next", Arial, sans-serif;
 	margin-bottom: 80px; /* Offset fixed footer. */
-	position: relative;
 }
 
 h1 {

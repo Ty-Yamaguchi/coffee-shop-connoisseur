@@ -3,8 +3,8 @@
 
         {{> headerMobile pageTitle=name back=true}}
 
-
-		<div class="csphoto" style="background-image: url({{csimage}});"></div>
+		<div class="content">
+			<div class="csphoto" style="background-image: url({{csimage}});"></div>
 			
 			<div class="details">
 				<h1>{{name}}</h1>
@@ -17,6 +17,7 @@
 					{{> googleMap name="coffeeshopMap" options=coffeeshopMapOptions}}
 				</div>
 			</div>
+		</div>
 		
 	{{/with}}
 </template>
