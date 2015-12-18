@@ -22,6 +22,23 @@
         <input type="text" id="lng" name="lng" placeholder="Longitude" value="{{lng}}" /><br>
         <label for="description">Description: </label>
         <textarea type="text" id="description" name="description" placeholder="Description" value="{{description}}"></textarea><br>
+        <fieldset>
+			<legend>Hours</legend>
+	        <label for="hoursMon">Monday: </label>
+	        <input type="text" id="hoursMon" name="hoursMon" placeholder="9:00 AM - 5:00 PM" value="{{hours.mon}}" /><br>
+	        <label for="hoursTue">Tuesday: </label>
+	        <input type="text" id="hoursTue" name="hoursTue" placeholder="9:00 AM - 5:00 PM" value="{{hours.tue}}" /><br>
+	        <label for="hours-wed">Wednesday: </label>
+	        <input type="text" id="hoursWed" name="hoursWed" placeholder="9:00 AM - 5:00 PM" value="{{hours.wed}}" /><br>
+	        <label for="hoursThu">Thursday: </label>
+	        <input type="text" id="hoursThu" name="hoursThu" placeholder="9:00 AM - 5:00 PM" value="{{hours.thu}}" /><br>
+	        <label for="hoursFri">Friday: </label>
+	        <input type="text" id="hoursFri" name="hoursFri" placeholder="9:00 AM - 5:00 PM" value="{{hours.fri}}" /><br>
+	        <label for="hoursSat">Saturday: </label>
+	        <input type="text" id="hoursSat" name="hoursSat" placeholder="9:00 AM - 5:00 PM" value="{{hours.sat}}" /><br>
+	        <label for="hoursSun">Sunday: </label>
+	        <input type="text" id="hoursSun" name="hoursSun" placeholder="9:00 AM - 5:00 PM" value="{{hours.sun}}" /><br>
+		</fieldset>
         {{#if _id}}
             <button class="button" type="submit">Update Coffee Shop</button>
             <a href="#" hook="delete-cafe" class="delete button" id="delete">Delete Coffee Shop</a>

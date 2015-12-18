@@ -17,11 +17,21 @@ Template.coffeeshopCreate.events({
 		var csimage = event.target.csimage.value;
 		var lat = event.target.lat.value;
 		var lng = event.target.lng.value;
+		var hours = {
+		  mon: event.target.hoursMon.value,
+		  tue: event.target.hoursTue.value,
+		  wed: event.target.hoursWed.value,
+		  thu: event.target.hoursThu.value,
+		  fri: event.target.hoursFri.value,
+		  sat: event.target.hoursSat.value,
+		  sun: event.target.hoursSun.value
+		};
 		
 		// Insert a cafe into the collection
 		var cafeAttributes = {
 			name: name,
 			phone: phone,
+			hours: hours,
 			streetAddress: streetAddress,
 			city: city,
 			state: state,
