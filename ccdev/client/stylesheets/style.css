@@ -169,7 +169,7 @@ ul {list-style-type: none;}
 	text-align: center;
 	border-bottom: 1px solid #999;
 	width: 80%;
-	margin: 0 auto;
+	margin: 0 auto 20px;
 }
 
 .description {margin: 20px 0;}

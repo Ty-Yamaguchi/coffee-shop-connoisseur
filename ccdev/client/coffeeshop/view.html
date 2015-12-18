@@ -8,6 +8,10 @@
 			
 			<div class="details">
 				<h1>{{name}}</h1>
+				<div class="contact-info">
+					Phone: {{phone}}<br/>
+					Address: {{streetAddress}} {{city}}, {{state}} {{zip}}
+				</div>
 				<div class="description">{{textareaToHTML description}}</div>
 				<div class="map-container">
 					{{> googleMap name="coffeeshopMap" options=coffeeshopMapOptions}}
