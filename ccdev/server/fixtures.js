@@ -2,6 +2,7 @@ if (Cafes.find().count() === 0) {
   Cafes.insert({
 	  name: 'Little Fish Coffee Co.',
 	  placeid: 'ChIJfSJxVGUGB3wRU-rWruQw_do',
+	  phone: '(808) 335-5000',
 	  streetAddress: '3900 Hanapepe Rd',
 	  city: 'Hanapepe',
 	  state: 'Hawaii',
@@ -14,6 +15,7 @@ if (Cafes.find().count() === 0) {
   Cafes.insert({
 	  name: 'Kalaheo Cafe & Coffee Company',
 	  placeid: 'ChIJfzUUJfgEB3wR994OrXg7kEY',
+	  phone: '(808) 332-5858',
 	  streetAddress: '2-2560 Kaumualii Hwy',
 	  city: 'Kalaheo',
 	  state: 'Hawaii',
@@ -26,6 +28,7 @@ if (Cafes.find().count() === 0) {
   Cafes.insert({
 	  name: 'Kauai Coffee Company',
 	  placeid: 'ChIJURsfO8MFB3wReNXq-qP5yaU',
+	  phone: '(808) 335-0813',
 	  streetAddress: '870 Halewili Rd',
 	  city: 'Kalaheo',
 	  state: 'Hawaii',
@@ -38,6 +41,7 @@ if (Cafes.find().count() === 0) {
   Cafes.insert({
 	  name: 'Small Town Coffee Co.',
 	  placeid: 'ChIJNeHCRvLgBnwRrIKpQGUFsIg',
+	  phone: '',
 	  streetAddress: '4-1543 Kuhio Hwy',
 	  city: 'Kapaa',
 	  state: 'Hawaii',
@@ -50,6 +54,7 @@ if (Cafes.find().count() === 0) {
   Cafes.insert({
 	  name: 'Art Cafe Hemingway',
 	  placeid: 'ChIJabHFQ_LgBnwROHHyufv_3m4',
+	  phone: '(808) 822-2250',
 	  streetAddress: '4-1495 Kuhio Hwy',
 	  city: 'Kapaa',
 	  state: 'Hawaii',
