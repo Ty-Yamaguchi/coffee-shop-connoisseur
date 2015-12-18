@@ -1,12 +1,18 @@
 // ROUTER OPTIONS
 Router.configure({
-	layoutTemplate: 'layout',
-	notFoundTemplate: 'notFound'
+    layoutTemplate: 'layout',
+    notFoundTemplate: 'notFound',
+	loadingTemplate: 'loading',
+	waitOn: function(){
+		return [
+			Meteor.subscribe('cafes')
+		]
+	}
 });
 
 // MAIN ROUTE: WELCOME
 Router.route('/', function () {
-	this.render('welcome');
+  this.render('welcome');
 });
 
 // CRUD: CREATE COFFEESHOP
@@ -59,6 +65,7 @@ Router.route('/admin', {
 	}
 });
 
+
 // CRUD: UPDATE
 Router.route('/coffeeshop/update/:_id', {
 	name: 'coffeeshopUpdate',
@@ -72,7 +79,21 @@ Router.route('/coffeeshop/update/:_id', {
 	
 });
 
-// ACCESS DENIED IF NOT LOGGED IN
+
+// CRUD: DELETE COFFEESHOP
+Router.route('/coffeeshop/delete/:_id', {
+	name: 'coffeeshopDelete',
+	data: function(){
+		return Cafes.findOne(
+			{
+				_id: this.params._id
+			}
+		);
+	}
+	
+});
+
+// Before action hook to force login
 var requireLogin = function() {
 	if (! Meteor.user()) {
 		this.render('accessDenied');
@@ -81,5 +102,4 @@ var requireLogin = function() {
 	}
 }
 
-Router.onBeforeAction(requireLogin, {only: 'coffeeshopUpdate'});
-Router.onBeforeAction(requireLogin, {only: 'admin'});
+Router.onBeforeAction(requireLogin, {only: ['coffeeshopUpdate','admin']});
