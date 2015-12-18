@@ -19,21 +19,12 @@ Meteor.methods({
 		}	
 		Cafes.remove(id);
 	 },
-	updateCafe : function (id, name, placeid, description, csimage, lat, lng) {
+	updateCafe : function (id, cafeAttributes) {
 		if (! Meteor.userId()) {
 			throw new Meteor.Error("not-authorized");
 			}
 	    Cafes.update(id, {
-	      $set: {
-	      
-	      	name: name,
-	      	placeid : placeid,
-	      	description : description,
-	      	csimage : csimage,
-	      	lat : lat,
-	      	lng : lng
-		      
-	      }
+	      $set: cafeAttributes
 	    });
 			 
 	 }	    
