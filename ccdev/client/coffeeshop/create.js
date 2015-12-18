@@ -13,18 +13,23 @@ Template.coffeeshopCreate.events({
 		
 		// Insert a cafe into the collection
 		var cafeAttributes = {
-  		name: name,
-  		placeid: placeid,
-  		description: description,
-  		csimage: csimage
+			name: name,
+			placeid: placeid,
+			description: description,
+			csimage: csimage
 		};
 		Meteor.call("addCafe", cafeAttributes, function(error, result){
-  		if (error) {
-    		return alert(error.reason);
-  		}
-  		// Redirect to Admin Route		
-  		Router.go('coffeeshopView', {_id: result._id});
-  		
+
+			if (error) {
+
+				alert(error.reason);
+
+			}else {
+
+				// Redirect to Admin Route
+				Router.go('coffeeshopView', {_id: result._id});
+
+			}
 		});
 
 	}
