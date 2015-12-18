@@ -1,11 +1,5 @@
-/********* METHODS *********/
-
 Meteor.methods({
 	addCafe : function (cafeAttributes) {
-		// Only continue if user is logged in
-		if (! Meteor.userId()) {
-			throw new Meteor.Error("not-authorized");
-		}	
 		var user = Meteor.user();
 		var cafe = _.extend(cafeAttributes, {
 			owner: user._id,
