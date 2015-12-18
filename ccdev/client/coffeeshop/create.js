@@ -10,14 +10,19 @@ Template.coffeeshopCreate.events({
 		var placeid = event.target.placeid.value;
 		var description = event.target.description.value;
 		var csimage = event.target.csimage.value;
+		var lat = event.target.lat.value;
+		var lng = event.target.lng.value;
 		
 		// Insert a cafe into the collection
 		var cafeAttributes = {
 			name: name,
 			placeid: placeid,
 			description: description,
-			csimage: csimage
+			csimage: csimage,
+			lat : lat,
+			lng : lng
 		};
+		
 		Meteor.call("addCafe", cafeAttributes, function(error, result){
 
 			if (error) {

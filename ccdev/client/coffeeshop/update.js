@@ -11,9 +11,11 @@ Template.coffeeshopUpdate.events({
 		var placeid = event.target.placeid.value;
 		var description = event.target.description.value;
 		var csimage = event.target.csimage.value;
+		var lat = event.target.lat.value;
+		var lng = event.target.lat.value;
 		
 		// Insert a cafe into the collection
-		Meteor.call("updateCafe", id, name, placeid, description, csimage);
+		Meteor.call("updateCafe", id, name, placeid, description, csimage, lat, lng);
 		
 		
 		// Redirect to Admin Route		

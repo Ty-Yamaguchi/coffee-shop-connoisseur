@@ -19,7 +19,7 @@ Meteor.methods({
 		}	
 		Cafes.remove(id);
 	 },
-	updateCafe : function (id, name, placeid, description, csimage) {
+	updateCafe : function (id, name, placeid, description, csimage, lat, lng) {
 		if (! Meteor.userId()) {
 			throw new Meteor.Error("not-authorized");
 			}
@@ -29,7 +29,9 @@ Meteor.methods({
 	      	name: name,
 	      	placeid : placeid,
 	      	description : description,
-	      	csimage : csimage
+	      	csimage : csimage,
+	      	lat : lat,
+	      	lng : lng
 		      
 	      }
 	    });
