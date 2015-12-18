@@ -5,12 +5,14 @@
 
   Template.coffeeshopView.helpers({
     coffeeshopMapOptions: function() {
+    	var lat = this.lat;
+    	var lng = this.lng;
       // Make sure the maps API has loaded
       if (GoogleMaps.loaded()) {
         // Map initialization options
         return {
-          center: new google.maps.LatLng(22.084494, -144.9631),
-          zoom: 8
+          center: new google.maps.LatLng(lat, lng),
+          zoom: 16
         };
       }
     }
