@@ -3,31 +3,32 @@
 {{#if currentUser}}
 
 	<!-- LIST OF CURRENT COFFEE SHOPS -->
+	<div class="content">
+	   	<ul class="admin-cafe-list"> 
+	   	
+		   	{{#each Cafes}}
+					<li class="coffeeshop">
+						
+					<section class="cafe-update-form"> 
+		   	  		
+					 	<form class="update-cafe">
+											
+							<h3>{{name}}</h3>
+							<a class="edit" href="{{pathFor 'coffeeshopUpdate'}}">Edit</a>
+							<hr>
+					
+						</form>
+						
+					</section>
+					</li>
 	
-   	<ul class="admin-cafe-list"> 
-   	
-	   	{{#each Cafes}}
-				<li class="coffeeshop">
-					
-				<section class="cafe-update-form"> 
-	   	  		
-				 	<form class="update-cafe">
-										
-						<h3>{{name}}</h3>
-						<a class="edit" href="{{pathFor 'coffeeshopUpdate'}}">Edit</a>
-						<hr>
-				
-					</form>
-					
-				</section>
-				</li>
-
-		{{/each}}
-
-	</ul>
-
-	<!-- ADD NEW COFFEE SHOP-->
-	<a href="/coffeeshop/create" class="add button">Add A New Coffee Shop</a>
+			{{/each}}
+	
+		</ul>
+	
+		<!-- ADD NEW COFFEE SHOP-->
+		<a href="/coffeeshop/create" class="add button">Add A New Coffee Shop</a>
+	</div>
 
 {{/if}}
 
