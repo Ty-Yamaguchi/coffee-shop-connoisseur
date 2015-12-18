@@ -16,8 +16,14 @@ body, ul, li, h1, h2, h3, a, p, strong, input {
 body {
 	background: #eee;
 	font-family: "Avenir Next", Arial, sans-serif;
-	margin-bottom: 80px; /* Offset fixed footer. */
 }
+
+.content {
+	margin-top: 70px; /* Offset fixed header. */
+	margin-bottom: 60px; /* Offset fixed footer. */
+	padding: 0 !important;
+}
+
 
 h1 {
 	font-size: 2.3em;
@@ -55,6 +61,7 @@ img {
 
 /* HEADER */
 
+/*
 .logo {
 	position: absolute; 
 	top: 5px; 
@@ -77,9 +84,33 @@ img {
 
 
 
+.headbar {
+	width: 100%;
+	height: 100px;
+	background: rgba(129,100,63, 1);
+	color: white;
+	text-align: center;
+}
+*/
+
+.bar-nav  {
+	width: 100%;
+	height: 70px;
+	background: rgba(129,100,63, 1);
+	box-sizing: border-box;
+	padding-top: 15px;
+}
+
+.bar-nav h1 {	
+	color: white;
+	font-weight: 400;
+}
+
+.icon-left-nav::before {color: white;}
+.icon-right-nav::after {color: white;}
+
+
 /* FLOATS */
-
-
 .right {float: right;}
 .left {float: left;}
 
@@ -95,7 +126,8 @@ img {
 	text-align: center;
 	vertical-align: middle;
 	padding: 180px 0 0 0;
-	text-shadow: 0 0 5px black;
+	text-shadow: 0 0 3px black;
+	font-weight: 400;
 
 }
 
@@ -112,7 +144,7 @@ img {
 }
 .cover {width: 100%;
 	height: 100%;
-	background: rgba(0,0,0, 0.3);
+	background: rgba(0,0,0, 0.333);
 	transition: 1s;
 
 }
@@ -169,6 +201,7 @@ ul {list-style-type: none;}
 	text-align: center;
 	border-bottom: 1px solid #999;
 	width: 80%;
+	padding-bottom: 10px;
 	margin: 0 auto;
 }
 
