@@ -24,7 +24,7 @@ Template.coffeeshopCreate.events({
 
 				alert(error.reason);
 
-			}else {
+			} else {
 
 				// Redirect to Admin Route
 				Router.go('coffeeshopView', {_id: result._id});
