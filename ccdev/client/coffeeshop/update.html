@@ -1,7 +1,8 @@
 <template name="coffeeshopUpdate">
 	<section class="admin-cafe-form">
 		<h1>Edit Coffee Shop</h1>
-		<form class="update-cafe" hook="update-cafe-form">
+
+<form class="update-cafe" hook="update-cafe-form">
 				<label for="name">Name: </label>
 				<input type="text" id="name" name="name" placeholder="Name" value="{{name}}" /><br>
 				<label for="placeid">Place ID: </label>
@@ -13,5 +14,7 @@
 				<button class="button" id="update-coffeeshop" type="submit">Update Coffee Shop</button>
 				<a href="#" hook="delete-cafe" class="delete button" id="delete">Delete Coffee Shop</a>
 		</form>
+
+
 	</section>
 </template>
