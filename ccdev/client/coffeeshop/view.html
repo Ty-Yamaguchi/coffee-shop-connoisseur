@@ -1,6 +1,9 @@
 <template name="coffeeshopView">
-	{{#with cafe}}
-		
+    {{#with cafe}}
+
+        {{> headerMobile pageTitle=name back=true}}
+
+
 		<div class="csphoto" style="background-image: url({{csimage}});"></div>
 			
 			<div class="details">

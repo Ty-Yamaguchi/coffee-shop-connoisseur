@@ -1,6 +1,6 @@
 // Google Maps
 Template.coffeeshopView.onRendered(function() {
-	GoogleMaps.load();
+	GoogleMaps.load({ v: '3', key: 'AIzaSyDuz95a5e7907yAlgPt3WkGgbhDP6V-RA4'});
 });
 
   Template.coffeeshopView.helpers({

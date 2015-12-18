@@ -2,8 +2,19 @@
 
 <template name="footer">  
 
-	<div class="footbar">
-		<a href="/admin">Admin</a>
-	</div>	 
+	<!--<div class="footbar">-->
+		<!--<a href="/admin">Admin</a>-->
+	<!--</div>	 -->
+
+    <nav id="footer" class="bar bar-tab">
+        <a href="#" class="tab-item {{isActive menu='coffeeshopList' active=getCurrentRoute}}">
+            <span class="icon icon-home"></span>
+            <span class="tab-label">All</span>
+        </a>
+        <a href="#" class="tab-item {{isActive menu='about' active=getCurrentRoute}}">
+            <span class="icon icon-gear"></span>
+            <span class="tab-label">About</span>
+        </a>
+    </nav>
 
 </template>

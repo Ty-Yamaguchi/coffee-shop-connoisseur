@@ -27,6 +27,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/url/1.0.5/web.browser/packages/url.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_url/1.0.11/web.browser/lib/compiler.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_url/1.0.11/web.browser/lib/url.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/sacha_spin/2.3.1/web.browser/packages/sacha_spin.js" />
         <item url="file://$USER_HOME$/.meteor/packages/jquery/1.11.4/web.browser/packages/jquery.js" />
         <item url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.7/web.browser/packages/fastclick.js" />
         <item url="file://$USER_HOME$/.meteor/packages/observe-sequence/1.0.7/web.browser/packages/observe-sequence.js" />
@@ -38,6 +39,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/ordered-dict/1.0.4/web.browser/packages/ordered-dict.js" />
         <item url="file://$USER_HOME$/.meteor/packages/sha/1.0.4/web.browser/packages/sha.js" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/accounts_ui.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/sacha_spin/2.3.1/web.browser/packages/sacha_spin/lib/spinner.css" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_dropdown.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_dynamic-template/1.0.12/web.browser/blaze_overrides.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_dynamic-template/1.0.12/web.browser/dynamic_template.js" />
@@ -46,6 +48,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/accounts-base/1.2.2/web.browser/localstorage_token.js" />
         <item url="file://$USER_HOME$/.meteor/packages/geojson-utils/1.0.4/web.browser/packages/geojson-utils.js" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-base/1.2.2/web.browser/accounts_client.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/percolate_velocityjs/1.1.0/web.browser/packages/percolate:velocityjs.js" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-base/1.2.2/web.browser/url_client.js" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons.js" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_dialogs.js" />
@@ -58,14 +61,19 @@
         <item url="file://$USER_HOME$/.meteor/packages/iron_layout/1.0.12/web.browser/layout.js" />
         <item url="file://$USER_HOME$/.meteor/packages/localstorage/1.0.5/web.browser/packages/localstorage.js" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_single.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/dburles_google-maps/1.1.5/web.browser/google-maps.js" />
         <item url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/packages/html-tools.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/zendy_velociratchet/2.0.0/web.browser/packages/zendy:velociratchet/css/ratchet.css" />
         <item url="file://$USER_HOME$/.meteor/packages/srp/1.0.4/web.browser/packages/srp.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/zendy_velociratchet/2.0.0/web.browser/packages/zendy:velociratchet.js" />
         <item url="file://$USER_HOME$/.meteor/packages/logging/1.0.8/web.browser/packages/logging.js" />
         <item url="file://$USER_HOME$/.meteor/packages/reactive-var/1.0.6/web.browser/packages/reactive-var.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_location/1.0.11/web.browser/lib/utils.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.2.6/web.browser/.npm/package/node_modules/meteor-ecmascript-runtime/client.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/percolate_momentum-iron-router/0.7.0/web.browser/packages/percolate:momentum-iron-router.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ddp-client/1.2.1/web.browser/packages/ddp-client.js" />
         <item url="file://$USER_HOME$/.meteor/packages/htmljs/1.0.5/web.browser/packages/htmljs.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/percolate_momentum/0.7.2/web.browser/packages/percolate:momentum.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_location/1.0.11/web.browser/lib/state.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_location/1.0.11/web.browser/lib/location.js" />
         <item url="file://$USER_HOME$/.meteor/packages/babel-runtime/0.1.4/web.browser/packages/babel-runtime.js" />
@@ -133,6 +141,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/url/1.0.5/web.browser/packages/url.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_url/1.0.11/web.browser/lib/compiler.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_url/1.0.11/web.browser/lib/url.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/sacha_spin/2.3.1/web.browser/packages/sacha_spin.js" />
       <root url="file://$USER_HOME$/.meteor/packages/jquery/1.11.4/web.browser/packages/jquery.js" />
       <root url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.7/web.browser/packages/fastclick.js" />
       <root url="file://$USER_HOME$/.meteor/packages/observe-sequence/1.0.7/web.browser/packages/observe-sequence.js" />
@@ -144,6 +153,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/ordered-dict/1.0.4/web.browser/packages/ordered-dict.js" />
       <root url="file://$USER_HOME$/.meteor/packages/sha/1.0.4/web.browser/packages/sha.js" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/accounts_ui.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/sacha_spin/2.3.1/web.browser/packages/sacha_spin/lib/spinner.css" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_dropdown.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_dynamic-template/1.0.12/web.browser/blaze_overrides.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_dynamic-template/1.0.12/web.browser/dynamic_template.js" />
@@ -152,6 +162,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/accounts-base/1.2.2/web.browser/localstorage_token.js" />
       <root url="file://$USER_HOME$/.meteor/packages/geojson-utils/1.0.4/web.browser/packages/geojson-utils.js" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-base/1.2.2/web.browser/accounts_client.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/percolate_velocityjs/1.1.0/web.browser/packages/percolate:velocityjs.js" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-base/1.2.2/web.browser/url_client.js" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons.js" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_dialogs.js" />
@@ -164,14 +175,19 @@
       <root url="file://$USER_HOME$/.meteor/packages/iron_layout/1.0.12/web.browser/layout.js" />
       <root url="file://$USER_HOME$/.meteor/packages/localstorage/1.0.5/web.browser/packages/localstorage.js" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_single.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/dburles_google-maps/1.1.5/web.browser/google-maps.js" />
       <root url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/packages/html-tools.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/zendy_velociratchet/2.0.0/web.browser/packages/zendy:velociratchet/css/ratchet.css" />
       <root url="file://$USER_HOME$/.meteor/packages/srp/1.0.4/web.browser/packages/srp.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/zendy_velociratchet/2.0.0/web.browser/packages/zendy:velociratchet.js" />
       <root url="file://$USER_HOME$/.meteor/packages/logging/1.0.8/web.browser/packages/logging.js" />
       <root url="file://$USER_HOME$/.meteor/packages/reactive-var/1.0.6/web.browser/packages/reactive-var.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_location/1.0.11/web.browser/lib/utils.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.2.6/web.browser/.npm/package/node_modules/meteor-ecmascript-runtime/client.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/percolate_momentum-iron-router/0.7.0/web.browser/packages/percolate:momentum-iron-router.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ddp-client/1.2.1/web.browser/packages/ddp-client.js" />
       <root url="file://$USER_HOME$/.meteor/packages/htmljs/1.0.5/web.browser/packages/htmljs.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/percolate_momentum/0.7.2/web.browser/packages/percolate:momentum.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_location/1.0.11/web.browser/lib/state.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_location/1.0.11/web.browser/lib/location.js" />
       <root url="file://$USER_HOME$/.meteor/packages/babel-runtime/0.1.4/web.browser/packages/babel-runtime.js" />
