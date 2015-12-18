@@ -15,6 +15,11 @@ Router.route('/', function () {
   name: 'coffeeshopList'
 });
 
+//  ROUTE: ABOUT
+Router.route('/about', {
+  name: 'about'
+});
+
 // CRUD: CREATE COFFEESHOP
 Router.route('/coffeeshop/create', {
 	name: 'coffeeshopCreate'
