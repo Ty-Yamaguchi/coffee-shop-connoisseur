@@ -7,6 +7,11 @@ Template.coffeeshopCreate.events({
 		
 		// Get value from form element
 		var name = event.target.name.value;
+		var phone = event.target.phone.value;
+		var streetAddress = event.target.streetAddress.value;
+		var city = event.target.city.value;
+		var state = event.target.state.value;
+		var zip = event.target.zip.value;
 		var placeid = event.target.placeid.value;
 		var description = event.target.description.value;
 		var csimage = event.target.csimage.value;
@@ -16,6 +21,11 @@ Template.coffeeshopCreate.events({
 		// Insert a cafe into the collection
 		var cafeAttributes = {
 			name: name,
+			phone: phone,
+			streetAddress: streetAddress,
+			city: city,
+			state: state,
+			zip: zip,
 			placeid: placeid,
 			description: description,
 			csimage: csimage,
