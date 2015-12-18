@@ -10,9 +10,9 @@ Router.configure({
 	}
 });
 
-// MAIN ROUTE: ABOUT
-Router.route('/about', function () {
-  this.render('about');
+// MAIN ROUTE: WELCOME
+Router.route('/', function () {
+  name: 'coffeeshopList'
 });
 
 // CRUD: CREATE COFFEESHOP
