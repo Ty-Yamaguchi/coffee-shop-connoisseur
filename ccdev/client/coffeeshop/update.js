@@ -30,11 +30,10 @@ Template.coffeeshopUpdate.events({
 		if (confirm('Permanently delete Coffeeshop?')) {
 		
 		  	 //Delete Coffeeshop from 
-		  	 Meteor.call("removeCafe", this._id);
+		  	 Meteor.call('removeCafe', this._id);
 		  	 
 		  	 //Redirect to Admin Route 
 		  	 Router.go('admin');	
-		
 		}
 	}
 	

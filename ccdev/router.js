@@ -1,24 +1,18 @@
 // ROUTER OPTIONS
 Router.configure({
-    layoutTemplate: 'layout',
-    notFoundTemplate: 'notFound'
+	layoutTemplate: 'layout',
+	notFoundTemplate: 'notFound'
 });
-
-
 
 // MAIN ROUTE: WELCOME
-
 Router.route('/', function () {
-  this.render('welcome');
+	this.render('welcome');
 });
-
-
 
 // CRUD: CREATE COFFEESHOP
 Router.route('/coffeeshop/create', {
 	name: 'coffeeshopCreate'
 });
-
 
 // CRUD: READ COFFEESHOP (SINGLE)
 Router.route('/coffeeshop/view/:_id', {
@@ -65,7 +59,6 @@ Router.route('/admin', {
 	}
 });
 
-
 // CRUD: UPDATE
 Router.route('/coffeeshop/update/:_id', {
 	name: 'coffeeshopUpdate',
@@ -79,27 +72,13 @@ Router.route('/coffeeshop/update/:_id', {
 	
 });
 
-
-// CRUD: DELETE COFFEESHOP
-Router.route('/coffeeshop/delete/:_id', {
-	name: 'coffeeshopDelete',
-	data: function(){
-		return Cafes.findOne(
-			{
-				_id: this.params._id
-			}
-		);
-	}
-	
-});
-
+// ACCESS DENIED IF NOT LOGGED IN
 var requireLogin = function() {
-  if (! Meteor.user()) {
-    this.render('accessDenied');
-  } else {
-    this.next();
-  }
+	if (! Meteor.user()) {
+		this.render('accessDenied');
+	} else {
+		this.next();
+	}
 }
 
-Router.onBeforeAction(requireLogin, {only: 'coffeeshopUpdate'});
-Router.onBeforeAction(requireLogin, {only: 'admin'});
+Router.onBeforeAction(requireLogin, ['coffeeshopUpdate', 'admin']);
