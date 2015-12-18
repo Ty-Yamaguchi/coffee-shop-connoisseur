@@ -1,13 +1,6 @@
 <template name="coffeeshopCreate">
-	<div class="admin-cafe-form">
+	<div class="admin-form">
 		<h1>Add A New Coffee Shop</h1>
-		<form class="new-cafe" hook="new-cafe-form">
-				<input type="text" name="name" placeholder="Name" /><br>
-				<input type="text" name="placeid" placeholder="Google Place ID" /><br>
-				<input type="text" name="csimage" placeholder="Image URL" /><br>
-				<textarea type="text" name="description" placeholder="Description"></textarea><br>
-				<button class="button" type="submit">Add Coffee Shop</button>
-				<a href="{{pathFor 'admin'}}" class="delete button">Cancel</a>
-		</form>
+			{{> form}}
 	</div>
 </template>

@@ -237,45 +237,14 @@ textarea {
 .publish {display: none;}
 
 
-.admin-cafe-form {
+.admin-form {
 	margin: 20px;
 }
 
-.admin-cafe-form textarea {
+.admin-form textarea {
 	min-height: 200px;
 }
 
-.cafe-update-form input,
-.cafe-update-form textarea  {
-	background: transparent;
-	border: none;
-	box-shadow: none;
-	padding: 3px;
-	margin: 0;
-	color: #444;
-	font-size: 1.1em;
-	font-weight: 300;
-	font-family: "Avenir Next", Arial, sans-serif;
-
-}
-
-
-.cafe-update-form input:focus,
-.cafe-update-form textarea:focus {
-	background: white;
-	border: none;
-	box-shadow: none;
-	padding: 3px;
-	margin: 0;
-	color: #111;
-	
-}
-
-.appdata {
-	display: block;
-	margin: 0 0 5px 0;
-	color: #777;
-}
 
 /* ACCOUNTS UI */
 

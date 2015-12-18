@@ -1,20 +1,6 @@
 <template name="coffeeshopUpdate">
-	<section class="admin-cafe-form">
+	<section class="admin-form">
 		<h1>Edit Coffee Shop</h1>
-
-<form class="update-cafe" hook="update-cafe-form">
-				<label for="name">Name: </label>
-				<input type="text" id="name" name="name" placeholder="Name" value="{{name}}" /><br>
-				<label for="placeid">Place ID: </label>
-				<input type="text" id="placeid" name="placeid" placeholder="Google Place ID" value="{{placeid}}" /><br>
-				<label for="csimage">Image URL: </label>
-				<input type="text" id="csimage" name="csimage" placeholder="Image URL" value="{{csimage}}" /><br>
-				<label for="csimage">Description: </label>
-				<textarea type="text" id="description" name="description" placeholder="Description" value="{{description}}"></textarea><br>
-				<button class="button" id="update-coffeeshop" type="submit">Update Coffee Shop</button>
-				<a href="#" hook="delete-cafe" class="delete button" id="delete">Delete Coffee Shop</a>
-		</form>
-
-
+			{{> form}}
 	</section>
 </template>

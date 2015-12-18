@@ -1,5 +1,5 @@
 <template name="form">
-    <form class="update-cafe" hook="cafe-form">
+         <form hook="form">
         <label for="name">Name: </label>
         <input type="text" id="name" name="name" placeholder="Name" value="{{name}}" /><br>
         <label for="placeid">Place ID: </label>
@@ -9,7 +9,7 @@
         <label for="csimage">Description: </label>
         <textarea type="text" id="description" name="description" placeholder="Description" value="{{description}}"></textarea><br>
         {{#if _id}}
-            <button class="button" id="update-coffeeshop" type="submit">Update Coffee Shop</button>
+            <button class="button" type="submit">Update Coffee Shop</button>
             <a href="#" hook="delete-cafe" class="delete button" id="delete">Delete Coffee Shop</a>
         {{else}}
             <button class="button" type="submit">Add Coffee Shop</button>
@@ -17,3 +17,5 @@
         {{/if}}
     </form>
 </template>
+
+
