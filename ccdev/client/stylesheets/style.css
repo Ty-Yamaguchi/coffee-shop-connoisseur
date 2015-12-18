@@ -20,8 +20,8 @@ body {
 
 .content {
 	margin-top: 70px; /* Offset fixed header. */
-	margin-bottom: 80px; /* Offset fixed footer. */
-	padding: 0 !important;
+	margin-bottom: 70px; /* Offset fixed footer. */
+	padding: 0 0 10px 0 !important;
 
 }
 
