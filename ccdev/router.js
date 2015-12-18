@@ -12,7 +12,7 @@ Router.configure({
 
 // MAIN ROUTE: WELCOME
 Router.route('/', function () {
-  this.render('welcome');
+  this.render('coffeeshopList');
 });
 
 // CRUD: CREATE COFFEESHOP
