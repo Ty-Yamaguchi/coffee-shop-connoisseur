@@ -11,9 +11,9 @@ Router.configure({
 });
 
 // MAIN ROUTE: WELCOME
-Router.route('/', function () {
-  name: 'coffeeshopList'
-});
+//Router.route('/', function () {
+//  name: 'coffeeshopList'
+//});
 
 //  ROUTE: ABOUT
 Router.route('/about', {
@@ -41,7 +41,7 @@ Router.route('/coffeeshop/view/:_id', {
 });
 
 // CRUD: READ COFFEESHOP LIST
-Router.route('/coffeeshop/list', {
+Router.route('/', {
 	name:'coffeeshopList',
 	data: function(){
 		var cafeList = Cafes.find(
