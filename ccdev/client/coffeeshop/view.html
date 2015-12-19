@@ -8,8 +8,11 @@
 			
 			<div class="details">
 				<h1>{{name}}</h1>
+				<div class="description">
+					{{textareaToHTML description}}
+				</div>
 				<div class="hours">
-					<h3 class="hours">Hours</h3>
+					<h3>Hours</h3>
 					Mon: {{hours.mon}}<br/>
 					Tue: {{hours.tue}}<br/>
 					Wed: {{hours.wed}}<br/>
@@ -19,11 +22,10 @@
 					Sun: {{hours.sun}}<br/>
 				</div>
 				<div class="contact-info">
-
+					<h3>Contact Info</h3>
 					Phone: {{phone}}<br/>
 					Address: {{streetAddress}} {{city}}, {{state}} {{zip}}
 				</div>
-				<div class="description">{{textareaToHTML description}}</div>
 				<div class="map-container">
 					{{> googleMap name="coffeeshopMap" options=coffeeshopMapOptions}}
 				</div>
