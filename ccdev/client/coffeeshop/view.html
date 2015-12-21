@@ -12,6 +12,7 @@
 					{{textareaToHTML description}}
 				</div>
 				<div class="hours">
+				{{#if hours}}
 					<h3>Hours</h3>
 					Mon: {{hours.mon}}<br/>
 					Tue: {{hours.tue}}<br/>
@@ -20,6 +21,7 @@
 					Fri: {{hours.fri}}<br/>
 					Sat: {{hours.sat}}<br/>
 					Sun: {{hours.sun}}<br/>
+				{{/if}}
 				</div>
 				<div class="contact-info">
 					<h3>Contact Info</h3>
