@@ -262,7 +262,7 @@ textarea {
 	display: inline-block;
 	text-align: center;
 	padding: 20px; 
-	background: rgba(129,100,63, 1);
+	background: #977350;
 	color: white;
 	font-size: 0.9em;
 	box-sizing: border-box;
@@ -272,6 +272,8 @@ textarea {
 	cursor: pointer;
 	cursor: hand;
 }
+
+.button:active {color: white;}
 
 .half {width: 49%;}
 
