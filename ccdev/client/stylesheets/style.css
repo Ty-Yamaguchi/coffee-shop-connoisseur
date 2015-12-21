@@ -141,31 +141,6 @@ ul {list-style-type: none;}
 
 /* FOOTER */
 
-/*
-.footbar {
-	width: 100%;
-	height: 70px;
-	background: rgba(129,100,63, 1);
-	color: white;
-	text-align: center;
-	margin: 10px 0 0 0;
-	padding: 25px; 
-	box-sizing: border-box;
-	position: fixed;
-	bottom: 0;
-
-}
-
-.footbar a {
-	font-family: "Avenir Next", Arial, sans-serif;
-	padding: 10px;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-}
-*/
-
-
 .bar-tab {
 	background: #977350;
 	height: 70px !important;
