@@ -63,39 +63,8 @@ img {
 
 /* HEADER */
 
-/*
-.logo {
-	position: absolute; 
-	top: 5px; 
-	right: 5px;
-}
-
-.logo img {max-height: 80px; 
-}
-
-.headbar {
-	width: 100%;
-	height: 100px;
-	background: rgba(129,100,63, 1);
-	color: white;
-	text-align: center;
-}
-.headbar h1{
-	padding: 20px 0 0 0;
-}
-
-
-
-.headbar {
-	width: 100%;
-	height: 100px;
-	background: rgba(129,100,63, 1);
-	color: white;
-	text-align: center;
-}
-*/
-
 .bar {border: none !important;}
+
 .bar-nav  {
 	width: 100%;
 	height: 70px;
