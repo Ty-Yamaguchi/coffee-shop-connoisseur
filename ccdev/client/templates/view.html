@@ -22,15 +22,27 @@
 					Sat: {{hours.sat}}<br/>
 					Sun: {{hours.sun}}<br/>
 				{{/if}}
+			
 				</div>
 				<div class="contact-info">
-					<h3>Contact Info</h3>
-					Phone: {{phone}}<br/>
-					Address: {{streetAddress}} {{city}}, {{state}} {{zip}}
+				
+					{{#if phone}}
+						<h3>Contact Info</h3>
+						Phone: {{phone}}<br>
+					{{/if}}
+					
+					{{#if streetAddress}}
+						Address: {{streetAddress}} {{city}}, {{state}} {{zip}}
+					{{/if}}
+					
 				</div>
-				<div class="map-container">
-					{{> googleMap name="coffeeshopMap" options=coffeeshopMapOptions}}
-				</div>
+				
+				{{#if lat}}
+					<div class="map-container">
+						{{> googleMap name="coffeeshopMap" options=coffeeshopMapOptions}}
+					</div>
+				{{/if}}
+				
 			</div>
 		</div>
 		
