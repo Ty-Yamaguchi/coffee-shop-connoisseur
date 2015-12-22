@@ -323,15 +323,19 @@ textarea {
 }
 
 .login-link-text {
+	color: #fff;
 	border: 1px solid #fff;
 	padding: 5px 10px;
+}
+
+.login-link-text:active, .login-link-text:visited {
+	color: white;
 }
 
 
 
 
 /* COFFEE SHOP LIST UI */
-
 
 .admin-title {
 	display: inline-block; 
