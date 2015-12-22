@@ -5,3 +5,11 @@ Meteor.publish('cafes' , function(){
 		username: false
 	}});
 });
+
+// Publish Cafes collection
+Meteor.publish('coffeeshops' , function(){
+	return Coffeeshops.find({}, {fields: {
+		owner: false,
+		username: false
+	}});
+});

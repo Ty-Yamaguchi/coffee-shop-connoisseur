@@ -1,5 +1,5 @@
 <template name="coffeeshopView">
-    {{#with cafe}}
+    {{#with coffeeshop}}
 
         {{> headerMobile pageTitle=name back=true}}
 
@@ -14,14 +14,12 @@
 				<div class="hours">
 					<h3>Hours</h3>
 					<h4>{{coffeeshopOpen}} Now</h4>
-					
-					{{coffeeshopHours 0}}<br/>
-					{{coffeeshopHours 1}}<br/>
-					{{coffeeshopHours 2}}<br/>
-					{{coffeeshopHours 3}}<br/>
-					{{coffeeshopHours 4}}<br/>
-					{{coffeeshopHours 5}}<br/>
-					{{coffeeshopHours 6}}<br/>
+
+					{{#each coffeeshopHours}}
+						{{dayString}}<br/>
+					{{/each}}
+				
+		
 				</div>
 				<div class="contact-info">
 					<h3>Contact Info</h3>
