@@ -1,8 +1,10 @@
 if (Meteor.users.find().count() === 0) {
-	Accounts.createUser({
-	    username: process.env.ADMIN_USERNAME,
-	    password : process.env.ADMIN_PASSWORD,
-	});
+	if (process.env.ADMIN_USERNAME && process.env.ADMIN_PASSWORD){
+		Accounts.createUser({
+			username: process.env.ADMIN_USERNAME,
+			password : process.env.ADMIN_PASSWORD,
+		});
+	}
 }
 if (Coffeeshops.find().count() === 0) {
   Coffeeshops.insert({
