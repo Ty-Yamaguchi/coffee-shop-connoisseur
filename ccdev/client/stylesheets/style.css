@@ -76,7 +76,7 @@ img {
 	background: #977350;
 	box-sizing: border-box;
 	padding-top: 15px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .bar-nav h1 {	
@@ -152,7 +152,7 @@ ul {list-style-type: none;}
 .bar-tab {
 	background: #977350;
 	height: 70px !important;
-	border-top: 1px solid rgba(0, 0, 0, 0.3);
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* .tab-item {border-top: 1px solid rgba(0, 0, 0, 0.3);} */
