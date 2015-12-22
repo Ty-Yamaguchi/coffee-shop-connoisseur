@@ -1,0 +1,137 @@
+{
+  "format": "web-program-pre1",
+  "manifest": [
+    {
+      "path": "2405f1467ec74fc31a70a3d14b0e443678884d78.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/2405f1467ec74fc31a70a3d14b0e443678884d78.js?meteor_js_resource=true",
+      "size": 630930,
+      "hash": "2405f1467ec74fc31a70a3d14b0e443678884d78"
+    },
+    {
+      "path": "673cf6f59d16fcdcdfca7506d43596710c471eb1.css",
+      "where": "client",
+      "type": "css",
+      "cacheable": true,
+      "url": "/673cf6f59d16fcdcdfca7506d43596710c471eb1.css?meteor_css_resource=true",
+      "size": 30434,
+      "hash": "673cf6f59d16fcdcdfca7506d43596710c471eb1"
+    },
+    {
+      "path": "packages/zendy_velociratchet/fonts/ratchicons.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/zendy_velociratchet/fonts/ratchicons.eot",
+      "size": 11688,
+      "hash": "3e2f11ef06160de4fef451a01d655c3c662f9753"
+    },
+    {
+      "path": "packages/zendy_velociratchet/fonts/ratchicons.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/zendy_velociratchet/fonts/ratchicons.svg",
+      "size": 11826,
+      "hash": "de52f2df4002024d7fc166339469a6dc001f7500"
+    },
+    {
+      "path": "packages/zendy_velociratchet/fonts/ratchicons.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/zendy_velociratchet/fonts/ratchicons.ttf",
+      "size": 11512,
+      "hash": "d5d6a15cb1d13e992f8acf6c274de15313d79464"
+    },
+    {
+      "path": "packages/zendy_velociratchet/fonts/ratchicons.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/zendy_velociratchet/fonts/ratchicons.woff",
+      "size": 6780,
+      "hash": "6d016f93966ad97bdb4c3b486ee11aab88481fdf"
+    },
+    {
+      "path": "app/img/about.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/about.jpg",
+      "size": 40355,
+      "hash": "18fe6c0cc50c1c7e0a275236c51761e2d04a2b4b"
+    },
+    {
+      "path": "app/img/cc.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/cc.png",
+      "size": 8206,
+      "hash": "4386270409842c3be32d3271a9ca8fb797e514ca"
+    },
+    {
+      "path": "app/img/coffee-fruit.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/coffee-fruit.jpg",
+      "size": 62589,
+      "hash": "69bdba5d9d8be164aa3f3730cb69a56c6cfb2b0a"
+    },
+    {
+      "path": "app/img/espresso.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/espresso.jpg",
+      "size": 58066,
+      "hash": "43a26b512f54a632a2bb91cb0d5b922e667864c9"
+    },
+    {
+      "path": "app/img/hanalei-roasters.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/hanalei-roasters.jpg",
+      "size": 361834,
+      "hash": "72ee3a97b3d6c8b6ca9b61a79f9e9690f3b8f8e0"
+    },
+    {
+      "path": "app/img/kalaheo-cafe.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/kalaheo-cafe.jpg",
+      "size": 82359,
+      "hash": "bb1ec1c00f531b431ca17d59ca4cce1ae58121c8"
+    },
+    {
+      "path": "app/img/little-fish.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/little-fish.jpg",
+      "size": 121225,
+      "hash": "fee6b3d0374a62f017d15a7bb63a8c69145e8a1e"
+    },
+    {
+      "path": "app/img/small-town.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/small-town.jpg",
+      "size": 131519,
+      "hash": "cf97eddb594347240d30ad4c0665d2a2a306a99b"
+    },
+    {
+      "path": "head.html",
+      "where": "internal",
+      "type": "head",
+      "hash": "59f946be690a71fe8cf3a290a84bf6ada6ec359c"
+    }
+  ]
+}

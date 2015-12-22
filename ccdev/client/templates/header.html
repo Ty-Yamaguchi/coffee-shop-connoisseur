@@ -1,14 +1,9 @@
-<!-- HEADER BAR -->
+<template name="headerMobile">
+    <header class="bar bar-nav">
+        {{#if back}}
+            <a href="{{pathFor 'coffeeshopList'}}" class="icon icon-left-nav pull-left" velociratchet-transition="left"></a>
+        {{/if}}
 
-<template name="header">  
-	<header>
-	  	<section class="headbar">
-	  		{{> login}}
-	  		<div class="logo">
-	  			<a href="/">
-	  				<img src="/img/cc.png" />
-	  			</a>
-	  		</div>
-	  	</section>
-	</header>
+        <h1 class="title">{{pageTitle}}</h1>
+    </header>
 </template>

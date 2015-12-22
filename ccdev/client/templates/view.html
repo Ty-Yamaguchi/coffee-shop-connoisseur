@@ -1,0 +1,46 @@
+<template name="coffeeshopView">
+    {{#with cafe}}
+
+        {{> headerMobile pageTitle=name back=true}}
+
+		<div class="content">
+			<div class="csphoto" style="background-image: url({{csimage}});"></div>
+			
+			<div class="details">
+				<h1>{{name}}</h1>
+				<div class="description">
+					{{textareaToHTML description}}
+				</div>
+				<div class="hours">
+				{{#if hours}}
+					<h3>Hours</h3>
+					<h4>{{coffeeshopOpen}} Now</h4>
+					
+					{{coffeeshopHours 0}}<br/>
+					{{coffeeshopHours 1}}<br/>
+					{{coffeeshopHours 2}}<br/>
+					{{coffeeshopHours 3}}<br/>
+					{{coffeeshopHours 4}}<br/>
+					{{coffeeshopHours 5}}<br/>
+					{{coffeeshopHours 6}}<br/>
+				</div>
+				<div class="contact-info">
+					<h3>Contact Info</h3>
+					Phone: {{coffeeshopPhone}}<br/>
+					Address: {{coffeeshopAddress}}
+				</div>
+				<div class="map-container">
+					{{> googleMap name="coffeeshopMap" options=coffeeshopMapOptions}}
+				</div>
+				
+				{{#if lat}}
+					<div class="map-container">
+						{{> googleMap name="coffeeshopMap" options=coffeeshopMapOptions}}
+					</div>
+				{{/if}}
+				
+			</div>
+		</div>
+		
+	{{/with}}
+</template>

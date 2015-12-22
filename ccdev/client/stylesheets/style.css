@@ -25,6 +25,10 @@ body {
 
 }
 
+.content p {
+	padding: 10px; 
+	font-size: 1em;
+	color: #444;}
 
 h1 {
 	font-size: 2.3em;
@@ -72,52 +76,25 @@ img {
 	height: auto;
 }
 
+
+
 /* HEADER */
 
-/*
-.logo {
-	position: absolute; 
-	top: 5px; 
-	right: 5px;
-}
+/* .bar {border: none !important;} */
 
-.logo img {max-height: 80px; 
-}
-
-.headbar {
-	width: 100%;
-	height: 100px;
-	background: rgba(129,100,63, 1);
-	color: white;
-	text-align: center;
-}
-.headbar h1{
-	padding: 20px 0 0 0;
-}
-
-
-
-.headbar {
-	width: 100%;
-	height: 100px;
-	background: rgba(129,100,63, 1);
-	color: white;
-	text-align: center;
-}
-*/
-
-.bar {border: none !important;}
 .bar-nav  {
 	width: 100%;
 	height: 70px;
-	background: rgba(129,100,63, 1);
+	background: #977350;
 	box-sizing: border-box;
 	padding-top: 15px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .bar-nav h1 {	
 	color: white;
 	font-weight: 400;
+	font-size: 1.2em;
 }
 
 .icon-left-nav::before {color: white;}
@@ -156,6 +133,9 @@ img {
 .coffeeshop {
 	padding: 10px 10px 0 10px;
 }
+
+.coffeeshop-list-item { width: 70%;}
+
 .cover {width: 100%;
 	height: 100%;
 	background: rgba(0,0,0, 0.333);
@@ -181,34 +161,20 @@ ul {list-style-type: none;}
 
 /* FOOTER */
 
-/*
-.footbar {
-	width: 100%;
-	height: 70px;
-	background: rgba(129,100,63, 1);
-	color: white;
-	text-align: center;
-	margin: 10px 0 0 0;
-	padding: 25px; 
-	box-sizing: border-box;
-	position: fixed;
-	bottom: 0;
-
-}
-
-.footbar a {
-	font-family: "Avenir Next", Arial, sans-serif;
-	padding: 10px;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-}
-*/
-
-
 .bar-tab {
-	background: rgba(129,100,63, 1);
+	background: #977350;
 	height: 70px !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* .tab-item {border-top: 1px solid rgba(0, 0, 0, 0.3);} */
+
+.tab-item:first-of-type {border-right: 1px solid rgba(0, 0, 0, 0.3);}
+.tab-item:last-of-type {border-left: 1px solid rgba(255, 255, 255, 0.3);}
+
+.tab-item:active {
+	background: #977350;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 span.tab-label, .bar-tab .tab-item .icon ~ .tab-label{
@@ -220,6 +186,14 @@ span.tab-label, .bar-tab .tab-item .icon ~ .tab-label{
 .icon-home::before, .icon-gear::before {
 	color: white;
  }
+ 
+.fa-coffee, .fa-book{
+	 color: white;
+	 font-size: 1.4em; 
+	 text-align: center;
+	 display: block;
+ }
+ 
  
 
 /*****************************************************
@@ -303,7 +277,7 @@ textarea {
 	display: inline-block;
 	text-align: center;
 	padding: 20px; 
-	background: rgba(129,100,63, 1);
+	background: #977350;
 	color: white;
 	font-size: 0.9em;
 	box-sizing: border-box;
@@ -313,6 +287,8 @@ textarea {
 	cursor: pointer;
 	cursor: hand;
 }
+
+.button:active {color: white;}
 
 .half {width: 49%;}
 
@@ -394,6 +370,8 @@ textarea {
 	border: none;
 	margin-left: 5px;
 }
+
+.edit:active {color: white;}
 
 .delete {color: #b00000; background: transparent;}
 

@@ -2,18 +2,14 @@
 
 <template name="footer">  
 
-	<!--<div class="footbar">-->
-		<!--<a href="/admin">Admin</a>-->
-	<!--</div>	 -->
-
     <nav id="footer" class="bar bar-tab">
         <a href="{{pathFor 'coffeeshopList'}}" class="tab-item {{isActive menu='coffeeshopList' active=getCurrentRoute}}">
-            <span class="icon icon-home"></span>
-            <span class="tab-label">All</span>
+            <i class="fa fa-coffee"></i>
+            <span class="tab-label">Coffeeshops</span>
         </a>
         <a href="{{pathFor 'about'}}" class="tab-item {{isActive menu='about' active=getCurrentRoute}}">
-            <span class="icon icon-gear"></span>
-            <span class="tab-label">About</span>
+			<i class="fa fa-book"></i>            
+			<span class="tab-label">About</span>
         </a>
     </nav>
 

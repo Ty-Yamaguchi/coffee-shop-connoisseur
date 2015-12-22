@@ -1,5 +1,7 @@
 <template name="admin">
 
+ {{> headerMobile pageTitle="Admin Area"}}
+
 {{#if currentUser}}
 
 	<!-- LIST OF CURRENT COFFEE SHOPS -->
@@ -7,21 +9,11 @@
 	   	<ul class="admin-cafe-list"> 
 	   	
 		   	{{#each Cafes}}
-					<li class="coffeeshop">
-						
-					<section class="cafe-update-form"> 
-		   	  		
-					 	<form class="update-cafe">
-											
-							<h3>{{name}}</h3>
+					<li class="coffeeshop">				
+							<h3 class="coffeeshop-list-item">{{name}}</h3>
 							<a class="edit" href="{{pathFor 'coffeeshopUpdate'}}">Edit</a>
 							<hr>
-					
-						</form>
-						
-					</section>
 					</li>
-	
 			{{/each}}
 	
 		</ul>

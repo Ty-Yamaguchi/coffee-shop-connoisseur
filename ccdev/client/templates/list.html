@@ -1,0 +1,24 @@
+<template name="coffeeshopList">
+    {{> headerMobile pageTitle="Coffee Lover's Guide To Kauai"}}
+    <div class="content">
+        <ul>
+            {{#each Cafes}}
+            <li class="coffeeshop">
+                <a href="{{pathFor 'coffeeshopView'}}" class="navigate-right">
+                    <div class="csphoto" style="background-image: url({{csimage}});">
+
+                        <div class="cover">
+
+                            <h1 class="coffeeco">{{name}}</h1>
+
+                        </div>
+
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+
+</template>
+
