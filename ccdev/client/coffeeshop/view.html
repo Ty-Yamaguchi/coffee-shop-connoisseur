@@ -13,18 +13,20 @@
 				</div>
 				<div class="hours">
 					<h3>Hours</h3>
-					Mon: {{hours.mon}}<br/>
-					Tue: {{hours.tue}}<br/>
-					Wed: {{hours.wed}}<br/>
-					Thu: {{hours.thu}}<br/>
-					Fri: {{hours.fri}}<br/>
-					Sat: {{hours.sat}}<br/>
-					Sun: {{hours.sun}}<br/>
+					<h4>{{coffeeshopOpen}} Now</h4>
+					
+					{{coffeeshopHours 0}}<br/>
+					{{coffeeshopHours 1}}<br/>
+					{{coffeeshopHours 2}}<br/>
+					{{coffeeshopHours 3}}<br/>
+					{{coffeeshopHours 4}}<br/>
+					{{coffeeshopHours 5}}<br/>
+					{{coffeeshopHours 6}}<br/>
 				</div>
 				<div class="contact-info">
 					<h3>Contact Info</h3>
-					Phone: {{phone}}<br/>
-					Address: {{streetAddress}} {{city}}, {{state}} {{zip}}
+					Phone: {{coffeeshopPhone}}<br/>
+					Address: {{coffeeshopAddress}}
 				</div>
 				<div class="map-container">
 					{{> googleMap name="coffeeshopMap" options=coffeeshopMapOptions}}
