@@ -24,7 +24,7 @@ Template.coffeeshopUpdate.events({
 		};
 		
 		// Update a cafe
-		Meteor.call("updateCafe", id, coffeeshopAttributes);
+		Meteor.call("updateCoffeeshop", id, coffeeshopAttributes);
 		
 		
 		// Redirect to Admin Route		
@@ -32,7 +32,7 @@ Template.coffeeshopUpdate.events({
 		
 	},	
     
-	 'click [hook="delete-cafe"]': function (event, template) {
+	 'click [hook="delete-coffeeshop"]': function (event, template) {
 		
 		// Prevent Default Click Event		
 		event.preventDefault();

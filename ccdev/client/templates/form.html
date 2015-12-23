@@ -14,7 +14,7 @@
         <textarea type="text" id="description" name="description" placeholder="Description" value="{{description}}"></textarea><br>
         {{#if _id}}
             <button class="button" type="submit">Update Coffee Shop</button>
-            <a href="#" hook="delete-cafe" class="delete button" id="delete">Delete Coffee Shop</a>
+            <a href="#" hook="delete-coffeeshop" class="delete button" id="delete">Delete Coffee Shop</a>
         {{else}}
             <button class="button" type="submit">Add Coffee Shop</button>
             <a href="{{pathFor 'admin'}}" class="delete button">Cancel</a>
