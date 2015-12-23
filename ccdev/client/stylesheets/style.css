@@ -210,7 +210,13 @@ span.tab-label, .bar-tab .tab-item .icon ~ .tab-label{
 	margin: 0 auto 20px;
 }
 
-.description {margin: 20px 0;}
+.description {
+	margin: 20px 0;
+}
+
+.description img {
+	margin: 10px 0;
+}
 
 .map-container {
 	border: 1px solid #9;
