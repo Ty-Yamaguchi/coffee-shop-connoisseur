@@ -23,7 +23,7 @@ Template.coffeeshopCreate.events({
 			lng : lng
 		};
 		
-		Meteor.call("addCafe", coffeeshopAttributes, function(error, result){
+		Meteor.call("addCoffeeshop", coffeeshopAttributes, function(error, result){
 
 			if (error) {
 
