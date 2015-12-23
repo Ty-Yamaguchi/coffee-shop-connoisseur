@@ -74,6 +74,7 @@ img {
 	height: auto;
 }
 
+.navigate-right::after, .push-right::after {display: none;}
 
 
 /* HEADER */
